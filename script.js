@@ -166,10 +166,10 @@ function createBoard() {
       cell.id = `cell-${i + 1}-${j + 1}`;
       cell.className = "cell";
 
-      // cell.style.width = `${100 / cols}%`;
-      // cell.style.height = `${100 / rows}%`;
-      cell.style.width = `calc(${100 / cols}%)`;
-      cell.style.height = `calc(${100 / rows}%)`;
+      cell.style.width = `${100 / cols}%`;
+      cell.style.height = `${100 / rows}%`;
+      // cell.style.width = `calc(100% / ${cols})`;
+      // cell.style.height = `calc(100% / ${rows})`;
 
       console.log(
         `(100 / ${cols})%`,
@@ -203,13 +203,15 @@ function createBoard() {
 function handleMouseDown(event) {
   console.log("Mouse Down");
   if (config.mouseType == "select") {
-    if (event.target.classList.contains("mark")) {
-      return;
-    } else {
+    // if (event.target.classList.contains("mark")) {
+    //   console.log("Mark")
+    //   return;
+    // } else {
+      console.log("ReMark")
       config.isMouseDown = true;
       event.target.classList.toggle("active");
       toggleMark(event.target);
-    }
+    // }
   } else {
     makeEditable(event.target);
   }
@@ -247,27 +249,6 @@ function handleMouseUp(event) {
 function getColor(value, type) {
   const bgPalette = document.getElementById("Background");
   const textPalette = document.getElementById("Text");
-  // if (type == "Background") {
-  //   document.querySelectorAll(".active").forEach((cell) => {
-  //     cell.classList.forEach((className) => {
-  //       if (className.startsWith("bg-")) {
-  //         cell.classList.remove(className);
-  //       }
-  //     });
-  //     cell.classList.add(`bg-${value}`);
-  //     document.getElementById("Background").classList.add(`bg-${value}`);
-  //   });
-  // } else {
-  //   document.querySelectorAll(".active").forEach((cell) => {
-  //     cell.classList.forEach((className) => {
-  //       if (className.startsWith("text-")) {
-  //         cell.classList.remove(className);
-  //       }
-  //     });
-  //     cell.classList.add(`text-${value}`);
-  //     document.getElementById("Text").classList.add(`text-${value}`);
-  //   });
-  // }
   if (type == "Background") {
     document.querySelectorAll(".active").forEach((cell) => {
       cell.classList.forEach((className) => {
@@ -292,11 +273,11 @@ function getColor(value, type) {
       });
       cell.classList.add(`text-${value}`);
       textPalette.classList.forEach((className) => {
-        if (className.startsWith("text-")) {
+        if (className.startsWith("bg-")) {
           textPalette.classList.remove(className);
         }
       });
-      textPalette.classList.add(`text-${value}`);
+      textPalette.classList.add(`bg-${value}`);
     });
   }
 }
@@ -315,6 +296,34 @@ function toggleMark(cell) {
       const colorC = computedStyle.getPropertyValue("color");
       const backgroundColor = rgbOrRgbaToHex(colorA);
       const textColor = rgbOrRgbaToHex(colorC);
+
+      const background = document.getElementById("Background");
+      const text = document.getElementById("Text");
+
+      background.classList.forEach(className => {
+        if (className.startsWith("bg-")) {
+          background.classList.remove(className);
+        }
+        
+        cell.classList.forEach(className => {
+          if (className.startsWith("bg-")) {
+            background.classList.add(className);
+          }
+        })
+      })
+
+      text.classList.forEach(className => {
+        if (className.startsWith("bg-")) {
+          text.classList.remove(className);
+        }
+        
+        cell.classList.forEach(className => {
+          if (className.startsWith("text-")) {
+            const textColor = className.substring(5);
+            text.classList.add(`bg-${textColor}`);
+          }
+        })
+      })
 
       document.getElementById("Background").style.background = backgroundColor;
       document.getElementById("Text").style.background = textColor;
@@ -405,10 +414,10 @@ function mergeBlock() {
     if (mark) mark.remove();
   });
 
-  // firstCell.style.width = `${widthPercent / rowSpan}%`;
-  // firstCell.style.height = `${heightPercent / colSpan}%`;
-  firstCell.style.width = `calc(${widthPercent / rowSpan})%`;
-  firstCell.style.height = `calc(${heightPercent / colSpan})%`;
+  firstCell.style.width = `${widthPercent / rowSpan}%`;
+  firstCell.style.height = `${heightPercent / colSpan}%`;
+  // firstCell.style.width = `calc(${widthPercent / rowSpan}%)`;
+  // firstCell.style.height = `calc(${heightPercent / colSpan}%)`;
 }
 
 function canMerge(selectedCells) {
@@ -742,7 +751,8 @@ function importDesign() {
 
 function exportDesign() {
   // const cssUrl = "style.css"; // URL of the external CSS file
-  const tableHtml = document.getElementById("work-board").outerHTML;
+  const tableHtml = document.getElementById("work-table").outerHTML;
+  console.log(tableHtml);
 
   const styleElement = document.getElementById("custom-style");
   const cssCode = styleElement.innerHTML;
