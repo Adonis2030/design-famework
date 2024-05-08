@@ -10,6 +10,10 @@
   --defaultColor: #d3d4d5;
 }
 
+.height-100vh {
+  height: 100vh;
+}
+
 .tool-board,
 .work-board {
   min-height: 100vh;

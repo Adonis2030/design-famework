@@ -280,6 +280,11 @@
         gap: 15px;
       }
 
+      /* Svg Codebase */
+      .svg-code {
+        min-height: 150px;
+      }
+
       /* Color classes */
       /* Primary colors */
       .bg-primary-900 {
@@ -797,7 +802,7 @@
   <body>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-lg-3 col-md-4 col-sm-12">
+        <div class="col-lg-3 col-md-4 col-sm-12 overflow-y-scroll height-100vh">
           <div class="tool-board mt-5 px-3">
             <div class="mb-3 select-all-block" id="select-all-block">
               <label>Select All</label>
@@ -904,7 +909,25 @@
               </select>
               <!-- Add more toolbar options as needed -->
             </div>
-            <div class="theme mt-5 mb-4">
+            <div class="svg-import mt-3">
+              <textarea
+                name="svg codebase"
+                id="svg-code"
+                class="svg-code w-100"
+                placeholder="Input svg codebases here..."
+              ></textarea>
+              <div class="svg-btn mt-3">
+                <button
+                  id="svg-save-btn"
+                  class="btn btn-primary w-100"
+                  onclick="importSVGToContent()"
+                  disabled="true"
+                >
+                  Save
+                </button>
+              </div>
+            </div>
+            <div class="theme mt-3 mb-4">
               <label>Theme</label>
               <select
                 onchange="changeTheme(value)"
@@ -926,7 +949,7 @@
               </select>
             </div>
             <div class="color-palette" id="colorPaletteContainer"></div>
-            <div class="template-btn-block">
+            <div class="template-btn-block mb-5">
               <button
                 class="btn btn-info w-100 import-btn"
                 onclick="importDesign()"

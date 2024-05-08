@@ -201,17 +201,11 @@ function createBoard() {
 }
 
 function handleMouseDown(event) {
-  console.log("Mouse Down");
   if (config.mouseType == "select") {
-    // if (event.target.classList.contains("mark")) {
-    //   console.log("Mark")
-    //   return;
-    // } else {
-      console.log("ReMark")
-      config.isMouseDown = true;
-      event.target.classList.toggle("active");
-      toggleMark(event.target);
-    // }
+    console.log("ReMark");
+    config.isMouseDown = true;
+    event.target.classList.toggle("active");
+    toggleMark(event.target);
   } else {
     makeEditable(event.target);
   }
@@ -300,30 +294,30 @@ function toggleMark(cell) {
       const background = document.getElementById("Background");
       const text = document.getElementById("Text");
 
-      background.classList.forEach(className => {
+      background.classList.forEach((className) => {
         if (className.startsWith("bg-")) {
           background.classList.remove(className);
         }
-        
-        cell.classList.forEach(className => {
+
+        cell.classList.forEach((className) => {
           if (className.startsWith("bg-")) {
             background.classList.add(className);
           }
-        })
-      })
+        });
+      });
 
-      text.classList.forEach(className => {
+      text.classList.forEach((className) => {
         if (className.startsWith("bg-")) {
           text.classList.remove(className);
         }
-        
-        cell.classList.forEach(className => {
+
+        cell.classList.forEach((className) => {
           if (className.startsWith("text-")) {
             const textColor = className.substring(5);
             text.classList.add(`bg-${textColor}`);
           }
-        })
-      })
+        });
+      });
 
       document.getElementById("Background").style.background = backgroundColor;
       document.getElementById("Text").style.background = textColor;
@@ -499,6 +493,14 @@ function changeMouseType(val) {
 }
 
 function makeEditable(cell) {
+  const svgBtn = document.getElementById("svg-save-btn");
+  if (cell.innerHTML.trim() === "" || cell.innerHTML.includes("</svg>")) {
+    svgBtn.disabled = false;
+    document.getElementById("svg-code").value = cell.innerHTML;
+  } else {
+    svgBtn.disabled = true;
+    console.log(cell.innerHTML);
+  }
   const computedStyle = window.getComputedStyle(cell);
   const fontWeight = computedStyle.getPropertyValue("font-weight");
   const fontSize = computedStyle.getPropertyValue("font-size");
@@ -778,4 +780,11 @@ function exportDesign() {
   downloadLink.href = URL.createObjectURL(blob);
   downloadLink.download = "generated.html";
   downloadLink.click();
+}
+
+function importSVGToContent() {
+  if (config.editableTD == "") return;
+  const svgTextArea = document.getElementById("svg-code");
+  const tdBlock = document.getElementById(config.editableTD);
+  tdBlock.innerHTML = svgTextArea.value;
 }
