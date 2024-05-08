@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="493.889mm" height="317.5mm"
+ viewBox="0 0 1400 900"
+ xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  version="1.2" baseProfile="tiny">
+<title>Qt Svg Document</title>
+<desc>Generated with Qt</desc>
+<defs>
+</defs>
+<g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" >
+
+<g fill="#ffffff" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)"
+font-family="MS Shell Dlg 2" font-size="7.5" font-weight="400" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M0,0 L1400,0 L1400,900 L0,900 L0,0"/>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M0,0 L1400,0 L1400,900 L0,900 L0,0"/>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M0,0 L1400,0 L1400,900 L0,900 L0,0"/>
+</g>
+
+<g fill="#f2f2f2" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)"
+font-family="MS Shell Dlg 2" font-size="7.5" font-weight="400" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M48,136 L301,136 L301,244 L48,244 L48,136"/>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M311,136 L564,136 L564,244 L311,244 L311,136"/>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M574,136 L827,136 L827,244 L574,244 L574,136"/>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M837,136 L1090,136 L1090,244 L837,244 L837,136"/>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M1100,136 L1352,136 L1352,244 L1100,244 L1100,136"/>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M48,244 L301,244 L301,389 L48,389 L48,244"/>
+</g>
+
+<g fill="#ffd43b" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)"
+font-family="MS Shell Dlg 2" font-size="7.5" font-weight="400" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M48,244 L301,244 L301,389 L48,389 L48,244"/>
+</g>
+
+<g fill="#f2f2f2" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)"
+font-family="MS Shell Dlg 2" font-size="7.5" font-weight="400" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M311,244 L564,244 L564,389 L311,389 L311,244"/>
+</g>
+
+<g fill="#ff6638" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)"
+font-family="MS Shell Dlg 2" font-size="7.5" font-weight="400" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M311,244 L564,244 L564,389 L311,389 L311,244"/>
+</g>
+
+<g fill="#f2f2f2" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)"
+font-family="MS Shell Dlg 2" font-size="7.5" font-weight="400" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M574,244 L827,244 L827,389 L574,389 L574,244"/>
+</g>
+
+<g fill="#38b6ff" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)"
+font-family="MS Shell Dlg 2" font-size="7.5" font-weight="400" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M574,244 L827,244 L827,389 L574,389 L574,244"/>
+</g>
+
+<g fill="#f2f2f2" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)"
+font-family="MS Shell Dlg 2" font-size="7.5" font-weight="400" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M837,244 L1090,244 L1090,389 L837,389 L837,244"/>
+</g>
+
+<g fill="#bd40fd" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)"
+font-family="MS Shell Dlg 2" font-size="7.5" font-weight="400" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M837,244 L1090,244 L1090,389 L837,389 L837,244"/>
+</g>
+
+<g fill="#f2f2f2" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)"
+font-family="MS Shell Dlg 2" font-size="7.5" font-weight="400" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M1100,244 L1352,244 L1352,389 L1100,389 L1100,244"/>
+</g>
+
+<g fill="#ffd43b" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)"
+font-family="MS Shell Dlg 2" font-size="7.5" font-weight="400" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M1100,244 L1352,244 L1352,389 L1100,389 L1100,244"/>
+</g>
+
+<g fill="#f2f2f2" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)"
+font-family="MS Shell Dlg 2" font-size="7.5" font-weight="400" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M48,389 L301,389 L301,721 L48,721 L48,389"/>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M311,389 L564,389 L564,721 L311,721 L311,389"/>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M574,389 L827,389 L827,721 L574,721 L574,389"/>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M837,389 L1090,389 L1090,721 L837,721 L837,389"/>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M1100,389 L1352,389 L1352,721 L1100,721 L1100,389"/>
+</g>
+
+<g fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Times New Roman" font-size="30" font-weight="700" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="572.5" y="78" font-family="Times New Roman" font-size="30" font-weight="700" font-style="normal" 
+ >Porter's Five Forces</text>
+</g>
+
+<g fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Times New Roman" font-size="20" font-weight="700" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="93.5" y="184" font-family="Times New Roman" font-size="20" font-weight="700" font-style="normal" 
+ >Bargining Power of</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="136" y="208" font-family="Times New Roman" font-size="20" font-weight="700" font-style="normal" 
+ >Suppliers</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="354" y="184" font-family="Times New Roman" font-size="20" font-weight="700" font-style="normal" 
+ >Barganing Power of</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="349.5" y="208" font-family="Times New Roman" font-size="20" font-weight="700" font-style="normal" 
+ >Buyers of Customers</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="627.5" y="184" font-family="Times New Roman" font-size="20" font-weight="700" font-style="normal" 
+ >Threat from New</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="664" y="208" font-family="Times New Roman" font-size="20" font-weight="700" font-style="normal" 
+ >Entrants</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="874.5" y="184" font-family="Times New Roman" font-size="20" font-weight="700" font-style="normal" 
+ >Threat of Substitutes</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="930.5" y="208" font-family="Times New Roman" font-size="20" font-weight="700" font-style="normal" 
+ >Product</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="1141" y="196" font-family="Times New Roman" font-size="20" font-weight="700" font-style="normal" 
+ >Competitive Rivalry</text>
+</g>
+
+<g fill="#f1f1f1" fill-opacity="1" stroke="none" transform="matrix(0.0625,0,0,0.0625,155,298)"
+font-family="Times New Roman" font-size="20" font-weight="700" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="nonzero" d="M224,256 C294.7,256 352,198.7 352,128 C352,57.3 294.7,0 224,0 C153.3,0 96,57.3 96,128 C96,198.7 153.3,256 224,256 M313.6,288 L296.9,288 C274.7,298.2 250,304 224,304 C198,304 173.4,298.2 151.1,288 L134.4,288 C60.2,288 0,348.2 0,422.4 L0,464 C0,490.5 21.5,512 48,512 L400,512 C426.5,512 448,490.5 448,464 L448,422.4 C448,348.2 387.8,288 313.6,288 M636.6,159.6 L608.8,131.5 C604.2,126.8 596.7,126.8 592,131.4 L487.2,235.4 L441.7,189.6 C437.1,184.9 429.6,184.9 424.9,189.5 L396.8,217.4 C392.1,222 392.1,229.5 396.7,234.2 L478.4,316.5 C483,321.2 490.5,321.2 495.2,316.6 L636.5,176.4 C641.1,171.7 641.2,164.2 636.6,159.6 "/>
+</g>
+
+<g fill="none" stroke="#f1f1f1" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" transform="matrix(0.0625,0,0,0.0625,155,298)"
+font-family="Times New Roman" font-size="20" font-weight="700" font-style="normal" 
+>
+<path vector-effect="none" fill-rule="nonzero" d="M224,256 C294.7,256 352,198.7 352,128 C352,57.3 294.7,0 224,0 C153.3,0 96,57.3 96,128 C96,198.7 153.3,256 224,256 M313.6,288 L296.9,288 C274.7,298.2 250,304 224,304 C198,304 173.4,298.2 151.1,288 L134.4,288 C60.2,288 0,348.2 0,422.4 L0,464 C0,490.5 21.5,512 48,512 L400,512 C426.5,512 448,490.5 448,464 L448,422.4 C448,348.2 387.8,288 313.6,288 M636.6,159.6 L608.8,131.5 C604.2,126.8 596.7,126.8 592,131.4 L487.2,235.4 L441.7,189.6 C437.1,184.9 429.6,184.9 424.9,189.5 L396.8,217.4 C392.1,222 392.1,229.5 396.7,234.2 L478.4,316.5 C483,321.2 490.5,321.2 495.2,316.6 L636.5,176.4 C641.1,171.7 641.2,164.2 636.6,159.6 "/>
+</g>
+
+<g fill="#f1f1f1" fill-opacity="1" stroke="none" transform="matrix(1.66667,0,0,1.66667,418,294)"
+font-family="Times New Roman" font-size="20" font-weight="700" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="nonzero" d="M9.15316,5.40838 C10.4198,3.13613 11.0531,2 12,2 C12.9469,2 13.5802,3.13612 14.8468,5.40837 L15.1745,5.99623 C15.5345,6.64193 15.7144,6.96479 15.9951,7.17781 C16.2757,7.39083 16.6251,7.4699 17.3241,7.62805 L17.9605,7.77203 C20.4201,8.32856 21.65,8.60682 21.9426,9.54773 C22.2352,10.4886 21.3968,11.4691 19.7199,13.4299 L19.2861,13.9372 C18.8096,14.4944 18.5713,14.773 18.4641,15.1177 C18.357,15.4624 18.393,15.8341 18.465,16.5776 L18.5306,17.2544 C18.7841,19.8706 18.9109,21.1787 18.1449,21.7602 C17.3788,22.3417 16.2273,21.8115 13.9243,20.7512 L13.3285,20.4768 C12.6741,20.1755 12.3469,20.0248 12,20.0248 C11.6531,20.0248 11.3259,20.1755 10.6715,20.4768 L10.0757,20.7512 C7.77268,21.8115 6.62118,22.3417 5.85515,21.7602 C5.08912,21.1787 5.21588,19.8706 5.4694,17.2544 L5.53498,16.5776 C5.60703,15.8341 5.64305,15.4624 5.53586,15.1177 C5.42868,14.773 5.19043,14.4944 4.71392,13.9372 L4.2801,13.4299 C2.60325,11.4691 1.76482,10.4886 2.05742,9.54773 C2.35002,8.60682 3.57986,8.32856 6.03954,7.77203 L6.67589,7.62805 C7.37485,7.4699 7.72433,7.39083 8.00494,7.17781 C8.28555,6.96479 8.46553,6.64194 8.82547,5.99623 L9.15316,5.40838"/>
+</g>
+
+<g fill="none" stroke="#f1f1f1" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" transform="matrix(1.66667,0,0,1.66667,418,294)"
+font-family="Times New Roman" font-size="20" font-weight="700" font-style="normal" 
+>
+<path vector-effect="none" fill-rule="nonzero" d="M9.15316,5.40838 C10.4198,3.13613 11.0531,2 12,2 C12.9469,2 13.5802,3.13612 14.8468,5.40837 L15.1745,5.99623 C15.5345,6.64193 15.7144,6.96479 15.9951,7.17781 C16.2757,7.39083 16.6251,7.4699 17.3241,7.62805 L17.9605,7.77203 C20.4201,8.32856 21.65,8.60682 21.9426,9.54773 C22.2352,10.4886 21.3968,11.4691 19.7199,13.4299 L19.2861,13.9372 C18.8096,14.4944 18.5713,14.773 18.4641,15.1177 C18.357,15.4624 18.393,15.8341 18.465,16.5776 L18.5306,17.2544 C18.7841,19.8706 18.9109,21.1787 18.1449,21.7602 C17.3788,22.3417 16.2273,21.8115 13.9243,20.7512 L13.3285,20.4768 C12.6741,20.1755 12.3469,20.0248 12,20.0248 C11.6531,20.0248 11.3259,20.1755 10.6715,20.4768 L10.0757,20.7512 C7.77268,21.8115 6.62118,22.3417 5.85515,21.7602 C5.08912,21.1787 5.21588,19.8706 5.4694,17.2544 L5.53498,16.5776 C5.60703,15.8341 5.64305,15.4624 5.53586,15.1177 C5.42868,14.773 5.19043,14.4944 4.71392,13.9372 L4.2801,13.4299 C2.60325,11.4691 1.76482,10.4886 2.05742,9.54773 C2.35002,8.60682 3.57986,8.32856 6.03954,7.77203 L6.67589,7.62805 C7.37485,7.4699 7.72433,7.39083 8.00494,7.17781 C8.28555,6.96479 8.46553,6.64194 8.82547,5.99623 L9.15316,5.40838"/>
+</g>
+
+<g fill="#f1f1f1" fill-opacity="1" stroke="none" transform="matrix(0.171795,0,0,0.171795,681,294)"
+font-family="Times New Roman" font-size="20" font-weight="700" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="nonzero" d="M200.12,100.611 C199.212,99.566 197.792,99.132 196.45,99.481 C188.601,101.551 181.29,106.248 175.304,113.062 L172.929,115.766 L172.581,112.182 C172.462,110.933 172.343,109.669 172.227,108.396 C170.34,88.144 168.205,65.191 150.015,51.708 C121.036,30.213 107.46,12.715 101.175,1.82 C100.447,0.559 99.031,-0.153 97.593,0.028 C96.148,0.202 94.945,1.219 94.537,2.618 C91.718,12.266 88.752,25.901 90.627,36.068 C92.121,44.167 97.95,52.319 103.593,60.213 C110.002,69.178 116.057,77.646 114.519,84.992 C113.793,88.466 111.386,91.442 107.367,93.839 C104.6,95.488 101.795,96.324 99.023,96.325 C93.557,96.325 88.235,92.957 84.038,86.843 C79.28,79.913 76.391,70.211 76.678,62.128 C76.718,60.975 76.209,59.87 75.306,59.152 C74.401,58.433 73.209,58.188 72.096,58.489 C66.006,60.135 60.115,63.779 55.504,68.752 C49.095,75.663 45.77,84.276 46.382,92.386 C47.119,102.031 52.482,110.566 57.669,118.824 C62.253,126.12 66.993,133.664 68.075,141.634 C68.754,146.636 67.954,150.484 65.7,153.066 C64.311,154.654 61.626,156.545 56.711,156.546 C51.011,156.546 43.807,154.073 37.439,149.931 C36.31,149.196 34.864,149.147 33.685,149.804 C32.507,150.461 31.79,151.717 31.823,153.067 C32.339,174.328 39.667,193.255 53.016,207.803 C67.828,223.947 88.767,232.836 111.976,232.836 C121.42,232.836 131.184,231.371 140.996,228.482 C173.554,218.893 196.199,184.831 192.552,150.934 C191.496,141.124 192.06,125.09 200.732,104.402 C201.267,103.126 201.029,101.656 200.12,100.611 "/>
+</g>
+
+<g fill="none" stroke="#f1f1f1" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" transform="matrix(0.171795,0,0,0.171795,681,294)"
+font-family="Times New Roman" font-size="20" font-weight="700" font-style="normal" 
+>
+<path vector-effect="none" fill-rule="nonzero" d="M200.12,100.611 C199.212,99.566 197.792,99.132 196.45,99.481 C188.601,101.551 181.29,106.248 175.304,113.062 L172.929,115.766 L172.581,112.182 C172.462,110.933 172.343,109.669 172.227,108.396 C170.34,88.144 168.205,65.191 150.015,51.708 C121.036,30.213 107.46,12.715 101.175,1.82 C100.447,0.559 99.031,-0.153 97.593,0.028 C96.148,0.202 94.945,1.219 94.537,2.618 C91.718,12.266 88.752,25.901 90.627,36.068 C92.121,44.167 97.95,52.319 103.593,60.213 C110.002,69.178 116.057,77.646 114.519,84.992 C113.793,88.466 111.386,91.442 107.367,93.839 C104.6,95.488 101.795,96.324 99.023,96.325 C93.557,96.325 88.235,92.957 84.038,86.843 C79.28,79.913 76.391,70.211 76.678,62.128 C76.718,60.975 76.209,59.87 75.306,59.152 C74.401,58.433 73.209,58.188 72.096,58.489 C66.006,60.135 60.115,63.779 55.504,68.752 C49.095,75.663 45.77,84.276 46.382,92.386 C47.119,102.031 52.482,110.566 57.669,118.824 C62.253,126.12 66.993,133.664 68.075,141.634 C68.754,146.636 67.954,150.484 65.7,153.066 C64.311,154.654 61.626,156.545 56.711,156.546 C51.011,156.546 43.807,154.073 37.439,149.931 C36.31,149.196 34.864,149.147 33.685,149.804 C32.507,150.461 31.79,151.717 31.823,153.067 C32.339,174.328 39.667,193.255 53.016,207.803 C67.828,223.947 88.767,232.836 111.976,232.836 C121.42,232.836 131.184,231.371 140.996,228.482 C173.554,218.893 196.199,184.831 192.552,150.934 C191.496,141.124 192.06,125.09 200.732,104.402 C201.267,103.126 201.029,101.656 200.12,100.611 "/>
+</g>
+
+<g fill="#f1f1f1" fill-opacity="1" stroke="none" transform="matrix(0.146921,0,0,0.146921,944,294)"
+font-family="Times New Roman" font-size="20" font-weight="700" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="nonzero" d="M235.096,103.563 C233.452,99.875 229.792,97.5 225.754,97.5 C214.065,97.5 148.804,97.5 148.804,97.5 L180.456,13.847 C181.645,10.705 181.215,7.179 179.305,4.414 C177.396,1.65 174.251,0 170.891,0 L94.762,0 C90.51,0 86.701,2.631 85.196,6.608 L36.936,134.152 C35.747,137.294 36.177,140.82 38.087,143.585 C39.997,146.349 43.142,148 46.502,148 L131.901,147.487 L86.78,267.492 C86.184,269.078 86.801,270.864 88.249,271.744 C89.697,272.624 91.567,272.348 92.7,271.088 L233.362,114.565 C236.06,111.561 236.74,107.251 235.096,103.563 "/>
+</g>
+
+<g fill="none" stroke="#f1f1f1" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" transform="matrix(0.146921,0,0,0.146921,944,294)"
+font-family="Times New Roman" font-size="20" font-weight="700" font-style="normal" 
+>
+<path vector-effect="none" fill-rule="nonzero" d="M235.096,103.563 C233.452,99.875 229.792,97.5 225.754,97.5 C214.065,97.5 148.804,97.5 148.804,97.5 L180.456,13.847 C181.645,10.705 181.215,7.179 179.305,4.414 C177.396,1.65 174.251,0 170.891,0 L94.762,0 C90.51,0 86.701,2.631 85.196,6.608 L36.936,134.152 C35.747,137.294 36.177,140.82 38.087,143.585 C39.997,146.349 43.142,148 46.502,148 L131.901,147.487 L86.78,267.492 C86.184,269.078 86.801,270.864 88.249,271.744 C89.697,272.624 91.567,272.348 92.7,271.088 L233.362,114.565 C236.06,111.561 236.74,107.251 235.096,103.563 "/>
+</g>
+
+<g fill="#f1f1f1" fill-opacity="1" stroke="none" transform="matrix(1.25,0,0,1.25,882.875,-27.25)"
+font-family="Times New Roman" font-size="20" font-weight="700" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M265.5,267 C266.329,267 267,267.672 267,268.5 C267,269.329 266.329,270 265.5,270 C264.671,270 264,269.329 264,268.5 C264,267.672 264.671,267 265.5,267 M271.5,267 C272.329,267 273,267.672 273,268.5 C273,269.329 272.329,270 271.5,270 C270.671,270 270,269.329 270,268.5 C270,267.672 270.671,267 271.5,267 M277.5,267 C278.329,267 279,267.672 279,268.5 C279,269.329 278.329,270 277.5,270 C276.671,270 276,269.329 276,268.5 C276,267.672 276.671,267 277.5,267 M268.637,279.736 C269.414,279.863 271.181,280 272,280 C279.18,280 284,274.657 284,268.375 C284,262.093 277.977,257 272,257 C264.811,257 259,262.093 259,268.375 C259,272.015 260.387,275.104 263,277.329 L263,283 L268.637,279.736 M285.949,266.139 L286,267 C286.008,267.817 286,267.742 286,268.5 C286,276.475 279.716,282 271,282 L268,282 C270.38,284.328 273.149,285.75 277,285.75 C277.819,285.75 278.618,285.676 279.395,285.549 L285,289 L285,283.329 C288.04,281.246 290,278.015 290,274.375 C290,271.131 288.439,268.211 285.949,266.139 "/>
+</g>
+
+<g fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,0,0)"
+font-family="Times New Roman" font-size="20" font-weight="700" font-style="normal" 
+>
+<path vector-effect="none" fill-rule="evenodd" d="M81,444.5 C81,445.881 79.8807,447 78.5,447 C77.1193,447 76,445.881 76,444.5 C76,443.119 77.1193,442 78.5,442 C79.8807,442 81,443.119 81,444.5 "/>
+</g>
+
+<g fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="93" y="450" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >Suppliers of specialized auto</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="93" y="470" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >components and raw</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="93" y="490" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >materials have substantial</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="93" y="510" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >power.</text>
+</g>
+
+<g fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,0,0)"
+font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+>
+<path vector-effect="none" fill-rule="evenodd" d="M81,524.5 C81,525.881 79.8807,527 78.5,527 C77.1193,527 76,525.881 76,524.5 C76,523.119 77.1193,522 78.5,522 C79.8807,522 81,523.119 81,524.5 "/>
+</g>
+
+<g fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="93" y="530" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >Suppliers of specialized auto</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="93" y="550" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >components and raw</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="93" y="570" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >materials have substantial</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="93" y="590" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >power.</text>
+</g>
+
+<g fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,0,0)"
+font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+>
+<path vector-effect="none" fill-rule="evenodd" d="M81,604.5 C81,605.881 79.8807,607 78.5,607 C77.1193,607 76,605.881 76,604.5 C76,603.119 77.1193,602 78.5,602 C79.8807,602 81,603.119 81,604.5 "/>
+</g>
+
+<g fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="93" y="610" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >Suppliers of specialized auto</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="93" y="630" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >components and raw</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="93" y="650" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >materials have substantial</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="93" y="670" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >power.</text>
+</g>
+
+<g fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,0,0)"
+font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+>
+<path vector-effect="none" fill-rule="evenodd" d="M344,444.5 C344,445.881 342.881,447 341.5,447 C340.119,447 339,445.881 339,444.5 C339,443.119 340.119,442 341.5,442 C342.881,442 344,443.119 344,444.5 "/>
+</g>
+
+<g fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="356" y="450" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >Suppliers of specialized auto</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="356" y="470" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >components and raw</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="356" y="490" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >materials have substantial</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="356" y="510" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >power.</text>
+</g>
+
+<g fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,0,0)"
+font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+>
+<path vector-effect="none" fill-rule="evenodd" d="M344,524.5 C344,525.881 342.881,527 341.5,527 C340.119,527 339,525.881 339,524.5 C339,523.119 340.119,522 341.5,522 C342.881,522 344,523.119 344,524.5 "/>
+</g>
+
+<g fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="356" y="530" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >Suppliers of specialized auto</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="356" y="550" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >components and raw</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="356" y="570" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >materials have substantial</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="356" y="590" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >power.</text>
+</g>
+
+<g fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,0,0)"
+font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+>
+<path vector-effect="none" fill-rule="evenodd" d="M344,604.5 C344,605.881 342.881,607 341.5,607 C340.119,607 339,605.881 339,604.5 C339,603.119 340.119,602 341.5,602 C342.881,602 344,603.119 344,604.5 "/>
+</g>
+
+<g fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="356" y="610" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >Suppliers of specialized auto</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="356" y="630" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >components and raw</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="356" y="650" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >materials have substantial</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="356" y="670" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >power.</text>
+</g>
+
+<g fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,0,0)"
+font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+>
+<path vector-effect="none" fill-rule="evenodd" d="M607,444.5 C607,445.881 605.881,447 604.5,447 C603.119,447 602,445.881 602,444.5 C602,443.119 603.119,442 604.5,442 C605.881,442 607,443.119 607,444.5 "/>
+</g>
+
+<g fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="619" y="450" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >Suppliers of specialized auto</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="619" y="470" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >components and raw</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="619" y="490" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >materials have substantial</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="619" y="510" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >power.</text>
+</g>
+
+<g fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,0,0)"
+font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+>
+<path vector-effect="none" fill-rule="evenodd" d="M607,524.5 C607,525.881 605.881,527 604.5,527 C603.119,527 602,525.881 602,524.5 C602,523.119 603.119,522 604.5,522 C605.881,522 607,523.119 607,524.5 "/>
+</g>
+
+<g fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="619" y="530" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >Suppliers of specialized auto</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="619" y="550" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >components and raw</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="619" y="570" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >materials have substantial</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="619" y="590" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >power.</text>
+</g>
+
+<g fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,0,0)"
+font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+>
+<path vector-effect="none" fill-rule="evenodd" d="M607,604.5 C607,605.881 605.881,607 604.5,607 C603.119,607 602,605.881 602,604.5 C602,603.119 603.119,602 604.5,602 C605.881,602 607,603.119 607,604.5 "/>
+</g>
+
+<g fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="619" y="610" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >Suppliers of specialized auto</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="619" y="630" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >components and raw</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="619" y="650" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >materials have substantial</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="619" y="670" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >power.</text>
+</g>
+
+<g fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,0,0)"
+font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+>
+<path vector-effect="none" fill-rule="evenodd" d="M870,444.5 C870,445.881 868.881,447 867.5,447 C866.119,447 865,445.881 865,444.5 C865,443.119 866.119,442 867.5,442 C868.881,442 870,443.119 870,444.5 "/>
+</g>
+
+<g fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="882" y="450" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >Suppliers of specialized auto</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="882" y="470" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >components and raw</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="882" y="490" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >materials have substantial</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="882" y="510" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >power.</text>
+</g>
+
+<g fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,0,0)"
+font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+>
+<path vector-effect="none" fill-rule="evenodd" d="M870,524.5 C870,525.881 868.881,527 867.5,527 C866.119,527 865,525.881 865,524.5 C865,523.119 866.119,522 867.5,522 C868.881,522 870,523.119 870,524.5 "/>
+</g>
+
+<g fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="882" y="530" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >Suppliers of specialized auto</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="882" y="550" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >components and raw</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="882" y="570" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >materials have substantial</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="882" y="590" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >power.</text>
+</g>
+
+<g fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,0,0)"
+font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+>
+<path vector-effect="none" fill-rule="evenodd" d="M870,604.5 C870,605.881 868.881,607 867.5,607 C866.119,607 865,605.881 865,604.5 C865,603.119 866.119,602 867.5,602 C868.881,602 870,603.119 870,604.5 "/>
+</g>
+
+<g fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="882" y="610" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >Suppliers of specialized auto</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="882" y="630" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >components and raw</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="882" y="650" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >materials have substantial</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="882" y="670" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >power.</text>
+</g>
+
+<g fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,0,0)"
+font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+>
+<path vector-effect="none" fill-rule="evenodd" d="M1133,444.5 C1133,445.881 1131.88,447 1130.5,447 C1129.12,447 1128,445.881 1128,444.5 C1128,443.119 1129.12,442 1130.5,442 C1131.88,442 1133,443.119 1133,444.5 "/>
+</g>
+
+<g fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="1145" y="450" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >Suppliers of specialized auto</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="1145" y="470" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >components and raw</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="1145" y="490" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >materials have substantial</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="1145" y="510" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >power.</text>
+</g>
+
+<g fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,0,0)"
+font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+>
+<path vector-effect="none" fill-rule="evenodd" d="M1133,524.5 C1133,525.881 1131.88,527 1130.5,527 C1129.12,527 1128,525.881 1128,524.5 C1128,523.119 1129.12,522 1130.5,522 C1131.88,522 1133,523.119 1133,524.5 "/>
+</g>
+
+<g fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="1145" y="530" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >Suppliers of specialized auto</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="1145" y="550" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >components and raw</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="1145" y="570" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >materials have substantial</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="1145" y="590" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >power.</text>
+</g>
+
+<g fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,0,0)"
+font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+>
+<path vector-effect="none" fill-rule="evenodd" d="M1133,604.5 C1133,605.881 1131.88,607 1130.5,607 C1129.12,607 1128,605.881 1128,604.5 C1128,603.119 1129.12,602 1130.5,602 C1131.88,602 1133,603.119 1133,604.5 "/>
+</g>
+
+<g fill="#000000" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="1145" y="610" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >Suppliers of specialized auto</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="1145" y="630" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >components and raw</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="1145" y="650" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >materials have substantial</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="1145" y="670" font-family="Times New Roman" font-size="16" font-weight="400" font-style="normal" 
+ >power.</text>
+</g>
+</g>
+</svg>

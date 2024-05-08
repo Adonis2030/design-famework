@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Porter</title>
+
+        <style>
+            .container {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+            .title {
+                margin-top: 50px;
+                margin-bottom: 50px;
+                font-size: 30px;
+                font-weight: bold;
+                text-align: center;
+            }
+            table {
+                width: 100%;
+                border-collapse: separate;
+                border-spacing: 10px 0px;
+            }
+            tbody>tr th{
+                width: 20%;
+                padding: 30px;
+                font-size: 20px;
+            }
+            tbody > :nth-child(2) td {
+                padding-left: 30px;
+                padding-right: 30px;
+                padding-top: 50px;
+                padding-bottom: 50px;
+                text-align: center;
+            }
+            tbody tr {
+                background-color: #f2f2f2;
+            }
+            tbody > :nth-child(2) > :nth-child(1) {
+                background-color: #ffd43b;
+            }
+            tbody > :nth-child(2) > :nth-child(2) {
+                background-color: #ff6638;
+            }
+            tbody > :nth-child(2) > :nth-child(3) {
+                background-color: #38b6ff;
+            }
+            tbody > :nth-child(2) > :nth-child(4) {
+                background-color: #bd40fd;
+            }
+            tbody > :nth-child(2) > :nth-child(5) {
+                background-color: #ffd43b;
+            }
+            tbody > :nth-child(3) td {
+                padding: 30px;
+            }
+            tbody > :nth-child(3) td ul {
+                padding-left: 15px;
+            }
+            tbody > :nth-child(2) td i {
+                color: #f1f1f1;
+                font-size: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="title">Porter's Five Forces</div>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Bargining Power of Suppliers</th>
+                        <th>Barganing Power of Buyers of Customers</th>
+                        <th>Threat from New Entrants</th>
+                        <th>Threat of Substitutes Product</th>
+                        <th>Competitive Rivalry</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <svg fill="#f1f1f1" width="40px" height="40px" viewBox="0 -64 640 640" xmlns="http://www.w3.org/2000/svg" stroke="#f1f1f1">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier"><path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4zm323-128.4l-27.8-28.1c-4.6-4.7-12.1-4.7-16.8-.1l-104.8 104-45.5-45.8c-4.6-4.7-12.1-4.7-16.8-.1l-28.1 27.9c-4.7 4.6-4.7 12.1-.1 16.8l81.7 82.3c4.6 4.7 12.1 4.7 16.8.1l141.3-140.2c4.6-4.7 4.7-12.2.1-16.8z"></path>
+                                </g>
+                            </svg>
+                        </td>
+                        <td>
+                            <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#f1f1f1"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9.15316 5.40838C10.4198 3.13613 11.0531 2 12 2C12.9469 2 13.5802 3.13612 14.8468 5.40837L15.1745 5.99623C15.5345 6.64193 15.7144 6.96479 15.9951 7.17781C16.2757 7.39083 16.6251 7.4699 17.3241 7.62805L17.9605 7.77203C20.4201 8.32856 21.65 8.60682 21.9426 9.54773C22.2352 10.4886 21.3968 11.4691 19.7199 13.4299L19.2861 13.9372C18.8096 14.4944 18.5713 14.773 18.4641 15.1177C18.357 15.4624 18.393 15.8341 18.465 16.5776L18.5306 17.2544C18.7841 19.8706 18.9109 21.1787 18.1449 21.7602C17.3788 22.3417 16.2273 21.8115 13.9243 20.7512L13.3285 20.4768C12.6741 20.1755 12.3469 20.0248 12 20.0248C11.6531 20.0248 11.3259 20.1755 10.6715 20.4768L10.0757 20.7512C7.77268 21.8115 6.62118 22.3417 5.85515 21.7602C5.08912 21.1787 5.21588 19.8706 5.4694 17.2544L5.53498 16.5776C5.60703 15.8341 5.64305 15.4624 5.53586 15.1177C5.42868 14.773 5.19043 14.4944 4.71392 13.9372L4.2801 13.4299C2.60325 11.4691 1.76482 10.4886 2.05742 9.54773C2.35002 8.60682 3.57986 8.32856 6.03954 7.77203L6.67589 7.62805C7.37485 7.4699 7.72433 7.39083 8.00494 7.17781C8.28555 6.96479 8.46553 6.64194 8.82547 5.99623L9.15316 5.40838Z" fill="#f1f1f1"></path> </g></svg>
+                        </td>
+                        <td>
+                            <svg fill="#f1f1f1" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="40px" viewBox="0 0 232.836 232.836" xml:space="preserve" stroke="#f1f1f1">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <g>
+                                        <path d="M200.12,100.611c-0.908-1.045-2.328-1.479-3.67-1.13c-7.849,2.07-15.16,6.767-21.146,13.581l-2.375,2.704l-0.348-3.584 c-0.119-1.249-0.238-2.513-0.354-3.786c-1.887-20.252-4.022-43.205-22.212-56.688C121.036,30.213,107.46,12.715,101.175,1.82 c-0.728-1.261-2.144-1.973-3.582-1.792c-1.445,0.174-2.648,1.191-3.056,2.59c-2.819,9.648-5.785,23.283-3.91,33.45 c1.494,8.099,7.323,16.251,12.966,24.145c6.409,8.965,12.464,17.433,10.926,24.779c-0.726,3.474-3.133,6.45-7.152,8.847 c-2.767,1.649-5.572,2.485-8.344,2.486c-5.466,0-10.788-3.368-14.985-9.482c-4.758-6.93-7.647-16.632-7.36-24.715 c0.04-1.153-0.469-2.258-1.372-2.976c-0.905-0.719-2.097-0.964-3.21-0.663c-6.09,1.646-11.981,5.29-16.592,10.263 c-6.409,6.911-9.734,15.524-9.122,23.634c0.737,9.645,6.1,18.18,11.287,26.438c4.584,7.296,9.324,14.84,10.406,22.81 c0.679,5.002-0.121,8.85-2.375,11.432c-1.389,1.588-4.074,3.479-8.989,3.48c-5.7,0-12.904-2.473-19.272-6.615 c-1.129-0.735-2.575-0.784-3.754-0.127c-1.178,0.657-1.895,1.913-1.862,3.263c0.516,21.261,7.844,40.188,21.193,54.736 c14.812,16.144,35.751,25.033,58.96,25.033c9.444,0,19.208-1.465,29.02-4.354c32.558-9.589,55.203-43.651,51.556-77.548 c-1.056-9.81-0.492-25.844,8.18-46.532C201.267,103.126,201.029,101.656,200.12,100.611z"></path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </td>
+                        <td>
+                            <svg fill="#f1f1f1" height="40px" width="40px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 272.256 272.256" xml:space="preserve" stroke="#f1f1f1">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path d="M235.096,103.563c-1.644-3.688-5.304-6.063-9.342-6.063c-11.689,0-76.95,0-76.95,0l31.652-83.653 c1.189-3.142,0.759-6.668-1.151-9.433C177.396,1.65,174.251,0,170.891,0H94.762c-4.252,0-8.061,2.631-9.566,6.608l-48.26,127.544 c-1.189,3.142-0.759,6.668,1.151,9.433c1.91,2.764,5.055,4.415,8.415,4.415l85.399-0.513L86.78,267.492 c-0.596,1.586,0.021,3.372,1.469,4.252c1.448,0.88,3.318,0.604,4.451-0.656l140.662-156.523 C236.06,111.561,236.74,107.251,235.096,103.563z"></path>
+                                </g>
+                            </svg>
+                        </td>
+                        <td>
+                            <svg viewBox="-0.5 0 32 32" width="40px" height="40px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" fill="#f1f1f1" stroke="#f1f1f1">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier"> 
+                                    <title>comments</title> 
+                                    <desc>Created with Sketch Beta.</desc> 
+                                    <defs> </defs> 
+                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"> 
+                                        <g id="Icon-Set-Filled" sketch:type="MSLayerGroup" transform="translate(-259.000000, -257.000000)" fill="#f1f1f1"> 
+                                            <path d="M265.5,267 C266.329,267 267,267.672 267,268.5 C267,269.329 266.329,270 265.5,270 C264.671,270 264,269.329 264,268.5 C264,267.672 264.671,267 265.5,267 L265.5,267 Z M271.5,267 C272.329,267 273,267.672 273,268.5 C273,269.329 272.329,270 271.5,270 C270.671,270 270,269.329 270,268.5 C270,267.672 270.671,267 271.5,267 L271.5,267 Z M277.5,267 C278.329,267 279,267.672 279,268.5 C279,269.329 278.329,270 277.5,270 C276.671,270 276,269.329 276,268.5 C276,267.672 276.671,267 277.5,267 L277.5,267 Z M268.637,279.736 C269.414,279.863 271.181,280 272,280 C279.18,280 284,274.657 284,268.375 C284,262.093 277.977,257 272,257 C264.811,257 259,262.093 259,268.375 C259,272.015 260.387,275.104 263,277.329 L263,283 L268.637,279.736 L268.637,279.736 Z M285.949,266.139 L286,267 C286.008,267.817 286,267.742 286,268.5 C286,276.475 279.716,282 271,282 L268,282 C270.38,284.328 273.149,285.75 277,285.75 C277.819,285.75 278.618,285.676 279.395,285.549 L285,289 L285,283.329 C288.04,281.246 290,278.015 290,274.375 C290,271.131 288.439,268.211 285.949,266.139 L285.949,266.139 Z" id="comments" sketch:type="MSShapeGroup"> 
+                                            </path> 
+                                        </g> 
+                                    </g> 
+                                </g>
+                            </svg>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                           <ul>
+                                <li>Suppliers of specialized auto components and raw materials have substantial power.</li>
+                                <li>Suppliers of specialized auto components and raw materials have substantial power.</li>
+                                <li>Suppliers of specialized auto components and raw materials have substantial power.</li>
+                           </ul> 
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Suppliers of specialized auto components and raw materials have substantial power.</li>
+                                <li>Suppliers of specialized auto components and raw materials have substantial power.</li>
+                                <li>Suppliers of specialized auto components and raw materials have substantial power.</li>
+                            </ul> 
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Suppliers of specialized auto components and raw materials have substantial power.</li>
+                                <li>Suppliers of specialized auto components and raw materials have substantial power.</li>
+                                <li>Suppliers of specialized auto components and raw materials have substantial power.</li>
+                            </ul> 
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Suppliers of specialized auto components and raw materials have substantial power.</li>
+                                <li>Suppliers of specialized auto components and raw materials have substantial power.</li>
+                                <li>Suppliers of specialized auto components and raw materials have substantial power.</li>
+                            </ul> 
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Suppliers of specialized auto components and raw materials have substantial power.</li>
+                                <li>Suppliers of specialized auto components and raw materials have substantial power.</li>
+                                <li>Suppliers of specialized auto components and raw materials have substantial power.</li>
+                            </ul> 
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+    </body>
+</html>
