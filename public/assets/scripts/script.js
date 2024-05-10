@@ -21,128 +21,252 @@ config = {
 
 basicColorData = ["Background", "Text"];
 
-const colorPalette = [
-    {
-        name: "primary",
-        shades: [
-            "#f5f6fc",
-            "#cdd3f1",
-            "#a5b0e6",
-            "#7d8edc",
-            "#566bd1",
-            "#2e48c6",
-            "#273da8",
-            "#20328b",
-            "#19286d",
-            "#121d4f",
-        ],
-    },
-    {
-        name: "secondary",
-        shades: [
-            "#f2f9f8",
-            "#c2e1dd",
-            "#91c9c2",
-            "#61b2a8",
-            "#309a8d",
-            "#008272",
-            "#006f61",
-            "#005b50",
-            "#00483f",
-            "#00342e",
-        ],
-    },
-    {
-        name: "tertiary",
-        shades: [
-            "#f8f9fb",
-            "#dee4ed",
-            "#c4cfe0",
-            "#a9bad2",
-            "#8fa4c4",
-            "#758fb6",
-            "#637a9b",
-            "#52647f",
-            "#404f64",
-            "#2f3949",
-        ],
-    },
-    {
-        name: "red",
-        shades: [
-            "#fdf5f5",
-            "#f4cecf",
-            "#eba8a9",
-            "#e28184",
-            "#da5b5e",
-            "#d13438",
-            "#b22c30",
-            "#922427",
-            "#731d1f",
-            "#541516",
-        ],
-    },
-    {
-        name: "orange",
-        shades: [
-            "#fdf7f2",
-            "#f5d8c2",
-            "#edb991",
-            "#e49a61",
-            "#dc7b30",
-            "#d45c00",
-            "#b44e00",
-            "#944000",
-            "#753300",
-            "#552500",
-        ],
-    },
-    {
-        name: "green",
-        shades: [
-            "#f7fbf3",
-            "#d9eac4",
-            "#bbda96",
-            "#9cca67",
-            "#7eb939",
-            "#60a90a",
-            "#529009",
-            "#437607",
-            "#355d06",
-            "#264404",
-        ],
-    },
-    {
-        name: "blue",
-        shades: [
-            "#f3f8fc",
-            "#c6dcef",
-            "#98c1e3",
-            "#6ba5d7",
-            "#3d8aca",
-            "#106ebe",
-            "#0e5ea2",
-            "#0b4d85",
-            "#093d69",
-            "#062c4c",
-        ],
-    },
-    {
-        name: "black",
-        shades: [
-            "#ffffff",
-            "#F5F5F5",
-            "#EEEEEE",
-            "#E0E0E0",
-            "#BDBDBD",
-            "#9E9E9E",
-            "#757575",
-            "#616161",
-            "#424242",
-            "#000000",
-        ],
-    },
-];
+const colorPalette = {
+    light: [
+        {
+            name: "primary",
+            shades: [
+                "#f5f6fc",
+                "#cdd3f1",
+                "#a5b0e6",
+                "#7d8edc",
+                "#566bd1",
+                "#2e48c6",
+                "#273da8",
+                "#20328b",
+                "#19286d",
+                "#121d4f",
+            ],
+        },
+        {
+            name: "secondary",
+            shades: [
+                "#f2f9f8",
+                "#c2e1dd",
+                "#91c9c2",
+                "#61b2a8",
+                "#309a8d",
+                "#008272",
+                "#006f61",
+                "#005b50",
+                "#00483f",
+                "#00342e",
+            ],
+        },
+        {
+            name: "tertiary",
+            shades: [
+                "#f8f9fb",
+                "#dee4ed",
+                "#c4cfe0",
+                "#a9bad2",
+                "#8fa4c4",
+                "#758fb6",
+                "#637a9b",
+                "#52647f",
+                "#404f64",
+                "#2f3949",
+            ],
+        },
+        {
+            name: "red",
+            shades: [
+                "#fdf5f5",
+                "#f4cecf",
+                "#eba8a9",
+                "#e28184",
+                "#da5b5e",
+                "#d13438",
+                "#b22c30",
+                "#922427",
+                "#731d1f",
+                "#541516",
+            ],
+        },
+        {
+            name: "orange",
+            shades: [
+                "#fdf7f2",
+                "#f5d8c2",
+                "#edb991",
+                "#e49a61",
+                "#dc7b30",
+                "#d45c00",
+                "#b44e00",
+                "#944000",
+                "#753300",
+                "#552500",
+            ],
+        },
+        {
+            name: "green",
+            shades: [
+                "#f7fbf3",
+                "#d9eac4",
+                "#bbda96",
+                "#9cca67",
+                "#7eb939",
+                "#60a90a",
+                "#529009",
+                "#437607",
+                "#355d06",
+                "#264404",
+            ],
+        },
+        {
+            name: "blue",
+            shades: [
+                "#f3f8fc",
+                "#c6dcef",
+                "#98c1e3",
+                "#6ba5d7",
+                "#3d8aca",
+                "#106ebe",
+                "#0e5ea2",
+                "#0b4d85",
+                "#093d69",
+                "#062c4c",
+            ],
+        },
+        {
+            name: "black",
+            shades: [
+                "#ffffff",
+                "#F5F5F5",
+                "#EEEEEE",
+                "#E0E0E0",
+                "#BDBDBD",
+                "#9E9E9E",
+                "#757575",
+                "#616161",
+                "#424242",
+                "#000000",
+            ],
+        },
+    ],
+    dark: [
+        {
+            name: "primary",
+            shades: [
+                "#f5f6fc",
+                "#cdd3f1",
+                "#a5b0e6",
+                "#7d8edc",
+                "#566bd1",
+                "#2e48c6",
+                "#273da8",
+                "#20328b",
+                "#19286d",
+                "#121d4f",
+            ],
+        },
+        {
+            name: "secondary",
+            shades: [
+                "#f2f9f8",
+                "#c2e1dd",
+                "#91c9c2",
+                "#61b2a8",
+                "#309a8d",
+                "#008272",
+                "#006f61",
+                "#005b50",
+                "#00483f",
+                "#00342e",
+            ],
+        },
+        {
+            name: "tertiary",
+            shades: [
+                "#f8f9fb",
+                "#dee4ed",
+                "#c4cfe0",
+                "#a9bad2",
+                "#8fa4c4",
+                "#758fb6",
+                "#637a9b",
+                "#52647f",
+                "#404f64",
+                "#2f3949",
+            ],
+        },
+        {
+            name: "accent",
+            shades: [
+                "#ff4d4d",
+                "#ff6666",
+                "#ff8080",
+                "#ff9999",
+                "#ffb3b3",
+                "#ffcccc",
+                "#ffe6e6",
+                "#fff2f2",
+                "#ffffff",
+                "#ffd9d9",
+            ],
+        },
+        {
+            name: "purple",
+            shades: [
+                "#2e1a47",
+                "#3c275c",
+                "#4a3471",
+                "#583f86",
+                "#674c9b",
+                "#7558b0",
+                "#8365c5",
+                "#9271da",
+                "#a07eeb",
+                "#ae8bf1",
+            ],
+        },
+        {
+            name: "teal",
+            shades: [
+                "#004d4d",
+                "#006666",
+                "#008080",
+                "#009999",
+                "#00b3b3",
+                "#00cccc",
+                "#00e6e6",
+                "#00f2f2",
+                "#00ffff",
+                "#00d9d9",
+            ],
+        },
+        {
+            name: "gold",
+            shades: [
+                "#b38600",
+                "#cc9900",
+                "#e6b800",
+                "#ffcc00",
+                "#ffd633",
+                "#ffdd66",
+                "#ffe699",
+                "#fff0cc",
+                "#fff5e6",
+                "#fffaf2",
+            ],
+        },
+        {
+            name: "black",
+            shades: [
+                "#ffffff",
+                "#F5F5F5",
+                "#EEEEEE",
+                "#E0E0E0",
+                "#BDBDBD",
+                "#9E9E9E",
+                "#757575",
+                "#616161",
+                "#424242",
+                "#000000",
+            ],
+        },
+    ],
+};
 
 const boldButton = document.getElementById("bold-button");
 const italicButton = document.getElementById("italic-button");
@@ -634,13 +758,8 @@ borderStyle.addEventListener("change", function (e) {
                 borderClass.classList.remove(className);
             }
 
-            if (e.target.value == "solid" && config.themeStyle == "light") {
-                borderTD.classList.add("border-style-solid-light");
-            } else if (
-                e.target.value == "solid" &&
-                config.themeStyle == "dark"
-            ) {
-                borderTD.classList.add("border-style-solid-dark");
+            if (e.target.value == "solid") {
+                borderTD.classList.add("border-style-display");
             } else {
                 borderTD.classList.add("border-style-none");
             }
@@ -654,8 +773,12 @@ alignmentSelect.addEventListener("change", function (e) {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+    reRenderColorPalette();
+});
+
+function reRenderColorPalette() {
     const container = document.getElementById("colorPaletteContainer");
-    const rows = colorPalette.length;
+    const rows = colorPalette[config.themeStyle].length;
     let htmlContent = "";
 
     for (let i = 0; i < 2; i++) {
@@ -668,32 +791,46 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     container.innerHTML = htmlContent;
-
     document
         .querySelectorAll(".color-palette-block")
         .forEach((block, index) => {
             let gridHtml = '<div class="color-grid" style="display: none;">';
             for (let row = 0; row < rows; row++) {
-                gridHtml += "<div>";
                 for (
                     let col = 0;
-                    col < colorPalette[row].shades.length;
+                    col < colorPalette[config.themeStyle][row].shades.length;
                     col++
                 ) {
                     gridHtml += `<button class="color-button bg-${
-                        colorPalette[row].name
+                        colorPalette[config.themeStyle][row].name
                     }-${
-                        (Math.abs(col - colorPalette[row].shades.length) - 1) *
+                        (Math.abs(
+                            col -
+                                colorPalette[config.themeStyle][row].shades
+                                    .length
+                        ) -
+                            1) *
                         100
-                    }" data-id='${colorPalette[row].name}-${
-                        (Math.abs(col - colorPalette[row].shades.length) - 1) *
+                    }" data-id='${colorPalette[config.themeStyle][row].name}-${
+                        (Math.abs(
+                            col -
+                                colorPalette[config.themeStyle][row].shades
+                                    .length
+                        ) -
+                            1) *
                         100
-                    }' onclick="getColor('${colorPalette[row].name}-${
-                        (Math.abs(col - colorPalette[row].shades.length) - 1) *
+                    }' onclick="getColor('${
+                        colorPalette[config.themeStyle][row].name
+                    }-${
+                        (Math.abs(
+                            col -
+                                colorPalette[config.themeStyle][row].shades
+                                    .length
+                        ) -
+                            1) *
                         100
                     }', '${basicColorData[index]}')"></button>`;
                 }
-                gridHtml += "</div>";
             }
             gridHtml += "</div>";
             block.innerHTML = gridHtml;
@@ -724,29 +861,16 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
-});
+}
 
 function changeTheme(value) {
-    const boardStyle = document.getElementById("work-board");
-    const borderStyle = document.querySelectorAll("TD");
     if (value === "dark") {
-        boardStyle.style.background = config.theme.dark.board;
-        borderStyle.forEach((borderStyle) => {
-            borderStyle.classList.remove("border-style-solid-light");
-            borderStyle.classList.add("border-style-solid-dark");
-            borderStyle.classList.remove("light-theme-text");
-            borderStyle.classList.add("dark-theme-text");
-        });
+        document.getElementById("theme-style").href = "assets/styles/dark.css";
     } else if (value === "light") {
-        boardStyle.style.background = config.theme.light.board;
-        borderStyle.forEach((borderStyle) => {
-            borderStyle.classList.remove("border-style-solid-dark");
-            borderStyle.classList.add("border-style-solid-light");
-            borderStyle.classList.remove("dar-theme-text");
-            borderStyle.classList.add("light-theme-text");
-        });
+        document.getElementById("theme-style").href = "assets/styles/light.css";
     }
     config.themeStyle = value;
+    reRenderColorPalette();
 }
 
 function selectAll(event) {
@@ -816,4 +940,20 @@ function importSVGToContent() {
 
     // Add new content
     tdBlock.innerHTML = `<div class="svg-block">${svgTextArea.value}</div>${tdBlock.innerHTML}`;
+}
+
+function exportDesignTemplate() {
+    $.ajax({
+        url: "{{ route('export-design') }}",
+        type: "GET",
+        data: {
+            theme: "light",
+        },
+        success: function (response) {
+            console.log(response);
+        },
+        error: function (xhr, status, error) {
+            console.log(error);
+        },
+    });
 }
