@@ -21,128 +21,252 @@ config = {
 
 basicColorData = ["Background", "Text"];
 
-const colorPalette = [
-  {
-    name: "primary",
-    shades: [
-      "#f5f6fc",
-      "#cdd3f1",
-      "#a5b0e6",
-      "#7d8edc",
-      "#566bd1",
-      "#2e48c6",
-      "#273da8",
-      "#20328b",
-      "#19286d",
-      "#121d4f",
-    ],
-  },
-  {
-    name: "secondary",
-    shades: [
-      "#f2f9f8",
-      "#c2e1dd",
-      "#91c9c2",
-      "#61b2a8",
-      "#309a8d",
-      "#008272",
-      "#006f61",
-      "#005b50",
-      "#00483f",
-      "#00342e",
-    ],
-  },
-  {
-    name: "tertiary",
-    shades: [
-      "#f8f9fb",
-      "#dee4ed",
-      "#c4cfe0",
-      "#a9bad2",
-      "#8fa4c4",
-      "#758fb6",
-      "#637a9b",
-      "#52647f",
-      "#404f64",
-      "#2f3949",
-    ],
-  },
-  {
-    name: "red",
-    shades: [
-      "#fdf5f5",
-      "#f4cecf",
-      "#eba8a9",
-      "#e28184",
-      "#da5b5e",
-      "#d13438",
-      "#b22c30",
-      "#922427",
-      "#731d1f",
-      "#541516",
-    ],
-  },
-  {
-    name: "orange",
-    shades: [
-      "#fdf7f2",
-      "#f5d8c2",
-      "#edb991",
-      "#e49a61",
-      "#dc7b30",
-      "#d45c00",
-      "#b44e00",
-      "#944000",
-      "#753300",
-      "#552500",
-    ],
-  },
-  {
-    name: "green",
-    shades: [
-      "#f7fbf3",
-      "#d9eac4",
-      "#bbda96",
-      "#9cca67",
-      "#7eb939",
-      "#60a90a",
-      "#529009",
-      "#437607",
-      "#355d06",
-      "#264404",
-    ],
-  },
-  {
-    name: "blue",
-    shades: [
-      "#f3f8fc",
-      "#c6dcef",
-      "#98c1e3",
-      "#6ba5d7",
-      "#3d8aca",
-      "#106ebe",
-      "#0e5ea2",
-      "#0b4d85",
-      "#093d69",
-      "#062c4c",
-    ],
-  },
-  {
-    name: "black",
-    shades: [
-      "#ffffff",
-      "#F5F5F5",
-      "#EEEEEE",
-      "#E0E0E0",
-      "#BDBDBD",
-      "#9E9E9E",
-      "#757575",
-      "#616161",
-      "#424242",
-      "#000000",
-    ],
-  },
-];
+const colorPalette = {
+  light: [
+    {
+      name: "primary",
+      shades: [
+        "#f5f6fc",
+        "#cdd3f1",
+        "#a5b0e6",
+        "#7d8edc",
+        "#566bd1",
+        "#2e48c6",
+        "#273da8",
+        "#20328b",
+        "#19286d",
+        "#121d4f",
+      ],
+    },
+    {
+      name: "secondary",
+      shades: [
+        "#f2f9f8",
+        "#c2e1dd",
+        "#91c9c2",
+        "#61b2a8",
+        "#309a8d",
+        "#008272",
+        "#006f61",
+        "#005b50",
+        "#00483f",
+        "#00342e",
+      ],
+    },
+    {
+      name: "tertiary",
+      shades: [
+        "#f8f9fb",
+        "#dee4ed",
+        "#c4cfe0",
+        "#a9bad2",
+        "#8fa4c4",
+        "#758fb6",
+        "#637a9b",
+        "#52647f",
+        "#404f64",
+        "#2f3949",
+      ],
+    },
+    {
+      name: "red",
+      shades: [
+        "#fdf5f5",
+        "#f4cecf",
+        "#eba8a9",
+        "#e28184",
+        "#da5b5e",
+        "#d13438",
+        "#b22c30",
+        "#922427",
+        "#731d1f",
+        "#541516",
+      ],
+    },
+    {
+      name: "orange",
+      shades: [
+        "#fdf7f2",
+        "#f5d8c2",
+        "#edb991",
+        "#e49a61",
+        "#dc7b30",
+        "#d45c00",
+        "#b44e00",
+        "#944000",
+        "#753300",
+        "#552500",
+      ],
+    },
+    {
+      name: "green",
+      shades: [
+        "#f7fbf3",
+        "#d9eac4",
+        "#bbda96",
+        "#9cca67",
+        "#7eb939",
+        "#60a90a",
+        "#529009",
+        "#437607",
+        "#355d06",
+        "#264404",
+      ],
+    },
+    {
+      name: "blue",
+      shades: [
+        "#f3f8fc",
+        "#c6dcef",
+        "#98c1e3",
+        "#6ba5d7",
+        "#3d8aca",
+        "#106ebe",
+        "#0e5ea2",
+        "#0b4d85",
+        "#093d69",
+        "#062c4c",
+      ],
+    },
+    {
+      name: "black",
+      shades: [
+        "#ffffff",
+        "#F5F5F5",
+        "#EEEEEE",
+        "#E0E0E0",
+        "#BDBDBD",
+        "#9E9E9E",
+        "#757575",
+        "#616161",
+        "#424242",
+        "#000000",
+      ],
+    },
+  ],
+  dark: [
+    {
+      name: "primary",
+      shades: [
+        "#f5f6fc",
+        "#cdd3f1",
+        "#a5b0e6",
+        "#7d8edc",
+        "#566bd1",
+        "#2e48c6",
+        "#273da8",
+        "#20328b",
+        "#19286d",
+        "#121d4f",
+      ],
+    },
+    {
+      name: "secondary",
+      shades: [
+        "#f2f9f8",
+        "#c2e1dd",
+        "#91c9c2",
+        "#61b2a8",
+        "#309a8d",
+        "#008272",
+        "#006f61",
+        "#005b50",
+        "#00483f",
+        "#00342e",
+      ],
+    },
+    {
+      name: "tertiary",
+      shades: [
+        "#f8f9fb",
+        "#dee4ed",
+        "#c4cfe0",
+        "#a9bad2",
+        "#8fa4c4",
+        "#758fb6",
+        "#637a9b",
+        "#52647f",
+        "#404f64",
+        "#2f3949",
+      ],
+    },
+    {
+      name: "accent",
+      shades: [
+        "#ff4d4d",
+        "#ff6666",
+        "#ff8080",
+        "#ff9999",
+        "#ffb3b3",
+        "#ffcccc",
+        "#ffe6e6",
+        "#fff2f2",
+        "#ffffff",
+        "#ffd9d9",
+      ],
+    },
+    {
+      name: "purple",
+      shades: [
+        "#2e1a47",
+        "#3c275c",
+        "#4a3471",
+        "#583f86",
+        "#674c9b",
+        "#7558b0",
+        "#8365c5",
+        "#9271da",
+        "#a07eeb",
+        "#ae8bf1",
+      ],
+    },
+    {
+      name: "teal",
+      shades: [
+        "#004d4d",
+        "#006666",
+        "#008080",
+        "#009999",
+        "#00b3b3",
+        "#00cccc",
+        "#00e6e6",
+        "#00f2f2",
+        "#00ffff",
+        "#00d9d9",
+      ],
+    },
+    {
+      name: "gold",
+      shades: [
+        "#b38600",
+        "#cc9900",
+        "#e6b800",
+        "#ffcc00",
+        "#ffd633",
+        "#ffdd66",
+        "#ffe699",
+        "#fff0cc",
+        "#fff5e6",
+        "#fffaf2",
+      ],
+    },
+    {
+      name: "black",
+      shades: [
+        "#ffffff",
+        "#F5F5F5",
+        "#EEEEEE",
+        "#E0E0E0",
+        "#BDBDBD",
+        "#9E9E9E",
+        "#757575",
+        "#616161",
+        "#424242",
+        "#000000",
+      ],
+    },
+  ],
+};
 
 const boldButton = document.getElementById("bold-button");
 const italicButton = document.getElementById("italic-button");
@@ -162,21 +286,12 @@ function createBoard() {
 
     for (let j = 0; j < cols; j++) {
       const cell = document.createElement("td");
-      // cell.textContent = `${i + 1}, ${j + 1}`;
       cell.id = `cell-${i + 1}-${j + 1}`;
       cell.className = "cell";
 
       cell.style.width = `${100 / cols}%`;
       cell.style.height = `${100 / rows}%`;
-      // cell.style.width = `calc(100% / ${cols})`;
-      // cell.style.height = `calc(100% / ${rows})`;
 
-      console.log(
-        `(100 / ${cols})%`,
-        `(100 / ${rows})%`,
-        cell.style.width,
-        cell.style.height
-      );
       cell.setAttribute("pos", j);
       cell.setAttribute("rowPos", i);
       cell.addEventListener("mousedown", handleMouseDown);
@@ -185,7 +300,6 @@ function createBoard() {
 
       cell.addEventListener("click", () => {
         if (config.mouseType === "edit") {
-          console.log(cell.id, "CELL"); //////////////////////////////////  -----   111111
           config.editableTD = cell.id;
           makeEditable(cell);
         }
@@ -202,10 +316,27 @@ function createBoard() {
 
 function handleMouseDown(event) {
   if (config.mouseType == "select") {
-    console.log("ReMark");
+    const svgBtn = document.getElementById("svg-save-btn");
     config.isMouseDown = true;
-    event.target.classList.toggle("active");
-    toggleMark(event.target);
+
+    const findCell = (element) => {
+      if (element.nodeName === "td" || element.nodeName === "TD") {
+        return element;
+      }
+
+      return findCell(element.parentNode);
+    };
+
+    let cell = event.target;
+
+    if (event.target.nodeName !== "td") {
+      cell = findCell(event.target);
+    }
+
+    cell.classList.toggle("active");
+    toggleMark(cell);
+    svgBtn.disabled = true;
+    document.getElementById("svg-code").value = "";
   } else {
     makeEditable(event.target);
   }
@@ -338,8 +469,6 @@ function mergeBlock() {
   }
 
   let indexArr = new Array();
-  const colVal = 0;
-  const rowVal = 0;
   let minRow = Infinity,
     maxRow = -Infinity,
     minCol = Infinity,
@@ -394,7 +523,6 @@ function mergeBlock() {
   const firstCell = document.querySelector(`#cell-${minRow + 1}-${minCol + 1}`);
   firstCell.setAttribute("rowspan", rowSpan);
   firstCell.setAttribute("colspan", colSpan);
-  console.log(firstCell.style.width); ////////////////////////////////// width
 
   activeCells.forEach((cell) => {
     if (cell !== firstCell) {
@@ -410,8 +538,6 @@ function mergeBlock() {
 
   firstCell.style.width = `${widthPercent / rowSpan}%`;
   firstCell.style.height = `${heightPercent / colSpan}%`;
-  // firstCell.style.width = `calc(${widthPercent / rowSpan}%)`;
-  // firstCell.style.height = `calc(${heightPercent / colSpan}%)`;
 }
 
 function canMerge(selectedCells) {
@@ -494,12 +620,12 @@ function changeMouseType(val) {
 
 function makeEditable(cell) {
   const svgBtn = document.getElementById("svg-save-btn");
-  if (cell.innerHTML.trim() === "" || cell.innerHTML.includes("</svg>")) {
+  if (config.mouseType == "select") {
+    svgBtn.disabled = true;
+    document.getElementById("svg-code").value = "";
+  } else {
     svgBtn.disabled = false;
     document.getElementById("svg-code").value = cell.innerHTML;
-  } else {
-    svgBtn.disabled = true;
-    console.log(cell.innerHTML);
   }
   const computedStyle = window.getComputedStyle(cell);
   const fontWeight = computedStyle.getPropertyValue("font-weight");
@@ -534,7 +660,6 @@ function makeEditable(cell) {
   } else if (alignment === "end") {
     alignmentSelect.value = "right";
   } else {
-    console.log(alignment, "alignment");
     alignmentSelect.value = alignment;
   }
 
@@ -578,7 +703,6 @@ function makeEditable(cell) {
 
   cell.addEventListener("blur", () => {
     cell.contentEditable = false;
-    const text = cell.textContent;
   });
 }
 
@@ -628,10 +752,8 @@ borderStyle.addEventListener("change", function (e) {
         borderClass.classList.remove(className);
       }
 
-      if (e.target.value == "solid" && config.themeStyle == "light") {
-        borderTD.classList.add("border-style-solid-light");
-      } else if (e.target.value == "solid" && config.themeStyle == "dark") {
-        borderTD.classList.add("border-style-solid-dark");
+      if (e.target.value == "solid") {
+        borderTD.classList.add("border-style-display");
       } else {
         borderTD.classList.add("border-style-none");
       }
@@ -645,8 +767,12 @@ alignmentSelect.addEventListener("change", function (e) {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+  reRenderColorPalette();
+});
+
+function reRenderColorPalette() {
   const container = document.getElementById("colorPaletteContainer");
-  const rows = colorPalette.length;
+  const rows = colorPalette[config.themeStyle].length;
   let htmlContent = "";
 
   for (let i = 0; i < 2; i++) {
@@ -659,21 +785,30 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   container.innerHTML = htmlContent;
-
   document.querySelectorAll(".color-palette-block").forEach((block, index) => {
     let gridHtml = '<div class="color-grid" style="display: none;">';
     for (let row = 0; row < rows; row++) {
-      gridHtml += "<div>";
-      for (let col = 0; col < colorPalette[row].shades.length; col++) {
-        gridHtml += `<button class="color-button bg-${colorPalette[row].name}-${
-          (Math.abs(col - colorPalette[row].shades.length) - 1) * 100
-        }" data-id='${colorPalette[row].name}-${
-          (Math.abs(col - colorPalette[row].shades.length) - 1) * 100
-        }' onclick="getColor('${colorPalette[row].name}-${
-          (Math.abs(col - colorPalette[row].shades.length) - 1) * 100
+      for (
+        let col = 0;
+        col < colorPalette[config.themeStyle][row].shades.length;
+        col++
+      ) {
+        gridHtml += `<button class="color-button bg-${
+          colorPalette[config.themeStyle][row].name
+        }-${
+          (Math.abs(col - colorPalette[config.themeStyle][row].shades.length) -
+            1) *
+          100
+        }" data-id='${colorPalette[config.themeStyle][row].name}-${
+          (Math.abs(col - colorPalette[config.themeStyle][row].shades.length) -
+            1) *
+          100
+        }' onclick="getColor('${colorPalette[config.themeStyle][row].name}-${
+          (Math.abs(col - colorPalette[config.themeStyle][row].shades.length) -
+            1) *
+          100
         }', '${basicColorData[index]}')"></button>`;
       }
-      gridHtml += "</div>";
     }
     gridHtml += "</div>";
     block.innerHTML = gridHtml;
@@ -703,29 +838,18 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
-});
+}
 
 function changeTheme(value) {
-  const boardStyle = document.getElementById("work-board");
-  const borderStyle = document.querySelectorAll("TD");
   if (value === "dark") {
-    boardStyle.style.background = config.theme.dark.board;
-    borderStyle.forEach((borderStyle) => {
-      borderStyle.classList.remove("border-style-solid-light");
-      borderStyle.classList.add("border-style-solid-dark");
-      borderStyle.classList.remove("light-theme-text");
-      borderStyle.classList.add("dark-theme-text");
-    });
+    document.getElementById("theme-style").href = "assets/styles/dark.css";
+    document.getElementById("theme-style").setAttribute("data-id", value);
   } else if (value === "light") {
-    boardStyle.style.background = config.theme.light.board;
-    borderStyle.forEach((borderStyle) => {
-      borderStyle.classList.remove("border-style-solid-dark");
-      borderStyle.classList.add("border-style-solid-light");
-      borderStyle.classList.remove("dar-theme-text");
-      borderStyle.classList.add("light-theme-text");
-    });
+    document.getElementById("theme-style").href = "assets/styles/light.css";
+    document.getElementById("theme-style").setAttribute("data-id", value);
   }
   config.themeStyle = value;
+  reRenderColorPalette();
 }
 
 function selectAll(event) {
@@ -747,27 +871,21 @@ function selectAll(event) {
   }
 }
 
-function importDesign() {
-  console.log("Import Design");
-}
-
 function exportDesign() {
-  // const cssUrl = "style.css"; // URL of the external CSS file
   const tableHtml = document.getElementById("work-table").outerHTML;
-  console.log(tableHtml);
 
-  const styleElement = document.getElementById("custom-style");
-  const cssCode = styleElement.innerHTML;
+  const styleElement = document.getElementById("theme-style");
+  const theme = styleElement.getAttribute("data-id");
 
   const htmlContent = `
     <html>
-      <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <style>
-          ${cssCode}
-        </style>
-      </head>
+    <head><meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet' />
+    <link id='external-style' href='assets/styles/style.css' rel='stylesheet' />
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js'></script>
+    <link id='theme-style' href='assets/styles/${theme}.css' data-id='${theme}' rel='stylesheet' />
+    <head/>
       <body>
         ${tableHtml}
       </body>
@@ -783,8 +901,97 @@ function exportDesign() {
 }
 
 function importSVGToContent() {
-  if (config.editableTD == "") return;
+  if (config.editableTD === "") return;
   const svgTextArea = document.getElementById("svg-code");
   const tdBlock = document.getElementById(config.editableTD);
-  tdBlock.innerHTML = svgTextArea.value;
+
+  // Remove existing elements with class "svg-block"
+  const svgBlocks = tdBlock.querySelectorAll(".svg-block");
+  svgBlocks.forEach((block) => {
+    block.parentNode.removeChild(block);
+  });
+
+  let svgTextAreaDom = document.createElement("div");
+  let isEditableContent = false;
+
+  svgTextAreaDom.innerHTML = svgTextArea.value;
+
+  for (let i = svgTextAreaDom.childNodes.length - 1; i >= 0; i--) {
+    if (
+      svgTextAreaDom.childNodes[i].className &&
+      svgTextAreaDom.childNodes[i].className === "editable-content"
+    ) {
+      isEditableContent = true;
+      svgTextAreaDom.removeChild(svgTextAreaDom.childNodes[i]);
+    }
+  }
+
+  const updateSvgElement = (element) => {
+    for (let i = 0; i < element.length; i++) {
+      if (element[i].nodeName && element[i].nodeName === "svg") {
+        return element[i];
+      }
+    }
+
+    return updateSvgElement(element[0].childNodes);
+  };
+
+  svgTextAreaDom = updateSvgElement(svgTextAreaDom.childNodes);
+
+  // Add new content
+  const newSvgBlock = document.createElement("div");
+  newSvgBlock.className = "svg-block";
+  newSvgBlock.appendChild(svgTextAreaDom);
+  tdBlock.insertBefore(newSvgBlock, tdBlock.firstChild);
+
+  if (!isEditableContent) {
+    const newEditableBlock = document.createElement("div");
+    newEditableBlock.contentEditable = true;
+    newEditableBlock.className = "editable-content";
+    tdBlock.insertBefore(newEditableBlock, tdBlock.firstChild);
+  }
 }
+
+const fileInput = document.getElementById("file-input");
+
+fileInput.addEventListener("change", function (event) {
+  const file = event.target.files[0];
+
+  if (file && file.type === "text/html") {
+    const reader = new FileReader();
+
+    reader.onload = function (e) {
+      const htmlContent = e.target.result;
+      let tempElement = document.createElement("div");
+      tempElement.innerHTML = htmlContent;
+
+      let themeStyleLink = tempElement.querySelector("#theme-style");
+      let theme = themeStyleLink.dataset.id;
+
+      const workBoard = document.getElementById("work-board");
+      workBoard.innerHTML = "";
+      workBoard.appendChild(tempElement.querySelector("table"));
+
+      const cells = workBoard.querySelectorAll("td");
+
+      cells.forEach((cell) => {
+        cell.addEventListener("mousedown", handleMouseDown);
+        cell.addEventListener("mouseover", handleMouseOver);
+        cell.addEventListener("mouseup", handleMouseUp);
+        cell.addEventListener("click", () => {
+          if (config.mouseType === "edit") {
+            config.editableTD = cell.id;
+            makeEditable(cell);
+          }
+        });
+      });
+
+      const themeStyle = document.getElementById("theme-style");
+      themeStyle.href = `assets/styles/${theme}.css`;
+      themeStyle.setAttribute("data-id", theme);
+    };
+    reader.readAsText(file);
+  } else {
+    alert("Please upload a valid HTML file.");
+  }
+});

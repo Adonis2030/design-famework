@@ -1,0 +1,8 @@
+.work-board {
+  background: #ffffff;
+}
+
+td {
+  border: 1px solid #273da8;
+  color: #000000;
+}
