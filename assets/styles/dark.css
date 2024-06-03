@@ -1,8 +1,8 @@
-.work-board {
+.work-board,
+.work-table {
   background: #373737;
 }
 
 td {
-  border: 1px solid #ffffff;
   color: #ffffff;
 }

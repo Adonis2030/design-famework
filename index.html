@@ -11,6 +11,11 @@
       href="./assets/styles/style.css"
       rel="stylesheet"
     />
+    <link
+      id="external-style"
+      href="./assets/styles/work-board.css"
+      rel="stylesheet"
+    />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link
       id="theme-style"
@@ -19,7 +24,2779 @@
       rel="stylesheet"
     />
   </head>
+  <style id="work-board-style">
+    table {
+      border-collapse: separate;
+      width: 100%;
+      height: 100%;
+    }
 
+    td {
+      position: relative;
+      font-size: 16px;
+      cursor: pointer;
+      user-select: none;
+      box-sizing: border-box;
+    }
+
+    td:hover,
+    td.active {
+      background-color: #0000001f;
+    }
+
+    .cell {
+      padding: 8px;
+      word-wrap: break-word;
+    }
+
+    .cell.text-alignment-tb,
+    .editable-content.text-alignment-tb {
+      writing-mode: vertical-rl;
+    }
+
+    .cell.text-alignment-bt,
+    .editable-content.text-alignment-bt {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+    }
+
+    .cell.text-alignment-rl,
+    .editable-content.text-alignment-rl {
+      direction: rtl;
+    }
+
+    .editable-content.text-alignment-tb,
+    .editable-content.text-alignment-bt {
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+
+    .editable-content.text-alignment-bt {
+      left: 50%;
+      transform: translate(-50%, 0) rotate(180deg) !important;
+    }
+
+    /* Paragraph */
+    .font-size-paragraph {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: normal;
+      line-height: 1.5;
+    }
+
+    .font-size-header-1 {
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .font-size-header-2 {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .font-size-header-3 {
+      font-size: 19px;
+      font-weight: bold;
+    }
+
+    .font-size-header-4 {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .font-size-header-5 {
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .font-size-header-6 {
+      font-size: 11px;
+      font-weight: bold;
+    }
+
+    /* Border Style */
+    .border-style-solid {
+      border-style: solid;
+    }
+
+    .border-style-dashed {
+      border-style: dashed;
+    }
+
+    .border-style-dotted {
+      border-style: dotted;
+    }
+
+    .border-style-groove {
+      border-style: groove;
+    }
+
+    /* Border Width */
+    .border-width-default {
+      border-width: 1px;
+    }
+
+    .border-width-1 {
+      border-width: 1px !important;
+    }
+
+    .border-width-3 {
+      border-width: 3px !important;
+    }
+
+    .border-width-5 {
+      border-width: 5px !important;
+    }
+
+    .border-style-default {
+      border-style: solid;
+    }
+
+    .border-set-all {
+      border-color: #000000 !important;
+    }
+
+    .border-set-none {
+      border-color: #d6d6d6 !important;
+    }
+
+    .border-set-left {
+      border-left-color: #000000 !important;
+    }
+
+    .border-set-right {
+      border-right-color: #000000 !important;
+    }
+    .border-set-top {
+      border-top-color: #000000 !important;
+    }
+    .border-set-bottom {
+      border-bottom-color: #000000 !important;
+    }
+
+    /* Select All Checkbox */
+    .select-all-block {
+      display: none;
+      justify-content: end;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .select-all {
+      width: 30px;
+      height: 30px;
+    }
+
+    .display-select-box {
+      display: flex !important;
+    }
+
+    /* Font */
+    .font-weight-bold {
+      font-weight: bold;
+    }
+
+    .font-weight-normal {
+      font-weight: normal;
+    }
+
+    .font-style-italic {
+      font-style: italic;
+    }
+
+    .font-style-normal {
+      font-style: normal;
+    }
+
+    /* Template Button Block */
+    .template-btn-block {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    /* Svg Codebase */
+    .svg-code {
+      min-height: 150px;
+    }
+
+    .svg-block {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: stretch;
+      justify-content: stretch;
+    }
+
+    .svg-block svg {
+      flex-grow: 1;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* svg {
+  width: 100%;
+  height: 100%;
+} */
+
+    .editable-content {
+      padding: 8px;
+      width: 100%;
+      height: 100%;
+      align-content: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1020;
+      outline: none;
+      word-break: break-all;
+    }
+
+    /* Import Design Style */
+
+    .import-design {
+      position: relative;
+    }
+
+    .import-input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    /* Scroll Bar */
+
+    ::-webkit-scrollbar {
+      width: 25px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #dddddd;
+      border-radius: 20px;
+      border: 6px solid transparent;
+      background-clip: content-box;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: #a5a5a5;
+      cursor: pointer;
+    }
+
+    /* Color classes */
+
+    /* Primary colors */
+    .bg-primary-900 {
+      background: #121d4f !important;
+    }
+
+    .bg-primary-800 {
+      background: #19286d !important;
+    }
+
+    .bg-primary-700 {
+      background: #20328b !important;
+    }
+
+    .bg-primary-600 {
+      background: #273da8 !important;
+    }
+
+    .bg-primary-500 {
+      background: #2e48c6 !important;
+    }
+
+    .bg-primary-400 {
+      background: #566bd1 !important;
+    }
+
+    .bg-primary-300 {
+      background: #7d8edc !important;
+    }
+
+    .bg-primary-200 {
+      background: #a5b0e6 !important;
+    }
+
+    .bg-primary-100 {
+      background: #cdd3f1 !important;
+    }
+
+    .bg-primary-0 {
+      background: #f5f6fc !important;
+    }
+
+    /* Secondary colors */
+    .bg-secondary-900 {
+      background: #00342e !important;
+    }
+
+    .bg-secondary-800 {
+      background: #00483f !important;
+    }
+
+    .bg-secondary-700 {
+      background: #005b50 !important;
+    }
+
+    .bg-secondary-600 {
+      background: #006f61 !important;
+    }
+
+    .bg-secondary-500 {
+      background: #008272 !important;
+    }
+
+    .bg-secondary-400 {
+      background: #309a8d !important;
+    }
+
+    .bg-secondary-300 {
+      background: #61b2a8 !important;
+    }
+
+    .bg-secondary-200 {
+      background: #91c9c2 !important;
+    }
+
+    .bg-secondary-100 {
+      background: #c2e1dd !important;
+    }
+
+    .bg-secondary-0 {
+      background: #f2f9f8 !important;
+    }
+
+    /* Tertiary colors */
+    .bg-tertiary-900 {
+      background: #2f3949 !important;
+    }
+
+    .bg-tertiary-800 {
+      background: #404f64 !important;
+    }
+
+    .bg-tertiary-700 {
+      background: #52647f !important;
+    }
+
+    .bg-tertiary-600 {
+      background: #637a9b !important;
+    }
+
+    .bg-tertiary-500 {
+      background: #758fb6 !important;
+    }
+
+    .bg-tertiary-400 {
+      background: #8fa4c4 !important;
+    }
+
+    .bg-tertiary-300 {
+      background: #a9bad2 !important;
+    }
+
+    .bg-tertiary-200 {
+      background: #c4cfe0 !important;
+    }
+
+    .bg-tertiary-100 {
+      background: #dee4ed !important;
+    }
+
+    .bg-tertiary-0 {
+      background: #f8f9fb !important;
+    }
+
+    /* Red colors */
+    .bg-red-900 {
+      background: #c00000 !important;
+    }
+
+    .bg-red-800 {
+      background: #c00000cc !important;
+    }
+
+    .bg-red-700 {
+      background: #c0000099 !important;
+    }
+
+    .bg-red-600 {
+      background: #c0000066 !important;
+    }
+
+    .bg-red-500 {
+      background: #c0000033 !important;
+    }
+
+    .bg-red-400 {
+      background: #c000001a !important;
+    }
+
+    .bg-red-300 {
+      background: #c000000d !important;
+    }
+
+    .bg-red-200 {
+      background: #c0000008 !important;
+    }
+
+    .bg-red-100 {
+      background: #c0000004 !important;
+    }
+
+    .bg-red-0 {
+      background: #c0000000 !important;
+    }
+
+    /* Yellow colors */
+    .bg-yellow-900 {
+      background: #ffc001 !important;
+    }
+
+    .bg-yellow-800 {
+      background: #ffc001cc !important;
+    }
+
+    .bg-yellow-700 {
+      background: #ffc00199 !important;
+    }
+
+    .bg-yellow-600 {
+      background: #ffc00166 !important;
+    }
+
+    .bg-yellow-500 {
+      background: #ffc00133 !important;
+    }
+
+    .bg-yellow-400 {
+      background: #ffc0011a !important;
+    }
+
+    .bg-yellow-300 {
+      background: #ffc0010d !important;
+    }
+
+    .bg-yellow-200 {
+      background: #ffc00108 !important;
+    }
+
+    .bg-yellow-100 {
+      background: #ffc00104 !important;
+    }
+
+    .bg-yellow-0 {
+      background: #ffc00100 !important;
+    }
+
+    /* Orange colors */
+    .bg-orange-900 {
+      background: #e97132 !important;
+    }
+
+    .bg-orange-800 {
+      background: #e97132cc !important;
+    }
+
+    .bg-orange-700 {
+      background: #e9713299 !important;
+    }
+
+    .bg-orange-600 {
+      background: #e9713266 !important;
+    }
+
+    .bg-orange-500 {
+      background: #e9713233 !important;
+    }
+
+    .bg-orange-400 {
+      background: #e971321a !important;
+    }
+
+    .bg-orange-300 {
+      background: #e971320d !important;
+    }
+
+    .bg-orange-200 {
+      background: #e9713208 !important;
+    }
+
+    .bg-orange-100 {
+      background: #e9713204 !important;
+    }
+
+    .bg-orange-0 {
+      background: #e9713200 !important;
+    }
+
+    /* Green colors */
+    .bg-green-900 {
+      background: #264404 !important;
+    }
+
+    .bg-green-800 {
+      background: #355d06 !important;
+    }
+
+    .bg-green-700 {
+      background: #437607 !important;
+    }
+
+    .bg-green-600 {
+      background: #529009 !important;
+    }
+
+    .bg-green-500 {
+      background: #60a90a !important;
+    }
+
+    .bg-green-400 {
+      background: #7eb939 !important;
+    }
+
+    .bg-green-300 {
+      background: #9cca67 !important;
+    }
+
+    .bg-green-200 {
+      background: #bbda96 !important;
+    }
+
+    .bg-green-100 {
+      background: #d9eac4 !important;
+    }
+
+    .bg-green-0 {
+      background: #f7fbf3 !important;
+    }
+
+    /* Blue colors */
+    .bg-blue-900 {
+      background: #062c4c !important;
+    }
+
+    .bg-blue-800 {
+      background: #093d69 !important;
+    }
+
+    .bg-blue-700 {
+      background: #0b4d85 !important;
+    }
+
+    .bg-blue-600 {
+      background: #0e5ea2 !important;
+    }
+
+    .bg-blue-500 {
+      background: #106ebe !important;
+    }
+
+    .bg-blue-400 {
+      background: #3d8aca !important;
+    }
+
+    .bg-blue-300 {
+      background: #6ba5d7 !important;
+    }
+
+    .bg-blue-200 {
+      background: #98c1e3 !important;
+    }
+
+    .bg-blue-100 {
+      background: #c6dcef !important;
+    }
+
+    .bg-blue-0 {
+      background: #f3f8fc !important;
+    }
+
+    /* Black colors */
+    .bg-black-900 {
+      background: #000000 !important;
+    }
+
+    .bg-black-800 {
+      background: #424242 !important;
+    }
+
+    .bg-black-700 {
+      background: #616161 !important;
+    }
+
+    .bg-black-600 {
+      background: #757575 !important;
+    }
+
+    .bg-black-500 {
+      background: #9e9e9e !important;
+    }
+
+    .bg-black-400 {
+      background: #bdbdbd !important;
+    }
+
+    .bg-black-300 {
+      background: #e0e0e0 !important;
+    }
+
+    .bg-black-200 {
+      background: #eeeeee !important;
+    }
+
+    .bg-black-100 {
+      background: #f5f5f5 !important;
+    }
+
+    .bg-black-0 {
+      background: #ffffff !important;
+    }
+
+    /* Accent colors */
+    .bg-accent-900 {
+      background: #ff4d4d !important;
+    }
+
+    .bg-accent-800 {
+      background: #ff6666 !important;
+    }
+
+    .bg-accent-700 {
+      background: #ff8080 !important;
+    }
+
+    .bg-accent-600 {
+      background: #ff9999 !important;
+    }
+
+    .bg-accent-500 {
+      background: #ffb3b3 !important;
+    }
+
+    .bg-accent-400 {
+      background: #ffcccc !important;
+    }
+
+    .bg-accent-300 {
+      background: #ffe6e6 !important;
+    }
+
+    .bg-accent-200 {
+      background: #fff2f2 !important;
+    }
+
+    .bg-accent-100 {
+      background: #ffffff !important;
+    }
+
+    .bg-accent-0 {
+      background: #ffd9d9 !important;
+    }
+
+    /* Purple colors */
+    .bg-purple-900 {
+      background: #2e1a47 !important;
+    }
+
+    .bg-purple-800 {
+      background: #3c275c !important;
+    }
+
+    .bg-purple-700 {
+      background: #4a3471 !important;
+    }
+
+    .bg-purple-600 {
+      background: #583f86 !important;
+    }
+
+    .bg-purple-500 {
+      background: #674c9b !important;
+    }
+
+    .bg-purple-400 {
+      background: #7558b0 !important;
+    }
+
+    .bg-purple-300 {
+      background: #8365c5 !important;
+    }
+
+    .bg-purple-200 {
+      background: #9271da !important;
+    }
+
+    .bg-purple-100 {
+      background: #a07eeb !important;
+    }
+
+    .bg-purple-0 {
+      background: #ae8bf1 !important;
+    }
+
+    /* Teal colors */
+    .bg-teal-900 {
+      background: #80e4c3 !important;
+    }
+
+    .bg-teal-800 {
+      background: #80e4c3cc !important;
+    }
+
+    .bg-teal-700 {
+      background: #80e4c399 !important;
+    }
+
+    .bg-teal-600 {
+      background: #80e4c366 !important;
+    }
+
+    .bg-teal-500 {
+      background: #80e4c333 !important;
+    }
+
+    .bg-teal-400 {
+      background: #80e4c31a !important;
+    }
+
+    .bg-teal-300 {
+      background: #80e4c30d !important;
+    }
+
+    .bg-teal-200 {
+      background: #80e4c308 !important;
+    }
+
+    .bg-teal-100 {
+      background: #80e4c304 !important;
+    }
+
+    .bg-teal-0 {
+      background: #80e4c300 !important;
+    }
+
+    /* Lavender colors */
+    .bg-lavender-900 {
+      background: #d4bfff !important;
+    }
+
+    .bg-lavender-800 {
+      background: #d4bfffcc !important;
+    }
+
+    .bg-lavender-700 {
+      background: #d4bfff99 !important;
+    }
+
+    .bg-lavender-600 {
+      background: #d4bfff66 !important;
+    }
+
+    .bg-lavender-500 {
+      background: #d4bfff33 !important;
+    }
+
+    .bg-lavender-400 {
+      background: #d4bfff1a !important;
+    }
+
+    .bg-lavender-300 {
+      background: #d4bfff0d !important;
+    }
+
+    .bg-lavender-200 {
+      background: #d4bfff08 !important;
+    }
+
+    .bg-lavender-100 {
+      background: #d4bfff04 !important;
+    }
+
+    .bg-lavender-0 {
+      background: #d4bfff00 !important;
+    }
+
+    /* Gold colors */
+    .bg-gold-900 {
+      background: #b38600 !important;
+    }
+
+    .bg-gold-800 {
+      background: #cc9900 !important;
+    }
+
+    .bg-gold-700 {
+      background: #e6b800 !important;
+    }
+
+    .bg-gold-600 {
+      background: #ffcc00 !important;
+    }
+
+    .bg-gold-500 {
+      background: #ffd633 !important;
+    }
+
+    .bg-gold-400 {
+      background: #ffdd66 !important;
+    }
+
+    .bg-gold-300 {
+      background: #ffe699 !important;
+    }
+
+    .bg-gold-200 {
+      background: #fff0cc !important;
+    }
+
+    .bg-gold-100 {
+      background: #fff5e6 !important;
+    }
+
+    .bg-gold-0 {
+      background: #fffaf2 !important;
+    }
+
+    /* MediumAquamarine colors */
+    .bg-mediumaquamarine-900 {
+      background: #66cdaa !important;
+    }
+
+    .bg-mediumaquamarine-800 {
+      background: #66cdaacc !important;
+    }
+
+    .bg-mediumaquamarine-700 {
+      background: #66cdaa99 !important;
+    }
+
+    .bg-mediumaquamarine-600 {
+      background: #66cdaa66 !important;
+    }
+
+    .bg-mediumaquamarine-500 {
+      background: #66cdaa33 !important;
+    }
+
+    .bg-mediumaquamarine-400 {
+      background: #66cdaa1a !important;
+    }
+
+    .bg-mediumaquamarine-300 {
+      background: #66cdaa0d !important;
+    }
+
+    .bg-mediumaquamarine-200 {
+      background: #66cdaa08 !important;
+    }
+
+    .bg-mediumaquamarine-100 {
+      background: #66cdaa04 !important;
+    }
+
+    .bg-mediumaquamarine-0 {
+      background: #66cdaa00 !important;
+    }
+
+    /* MediumAquamarine colors */
+    .bg-yellowgreen-900 {
+      background: #9acd32 !important;
+    }
+
+    .bg-yellowgreen-800 {
+      background: #9acd32cc !important;
+    }
+
+    .bg-yellowgreen-700 {
+      background: #9acd3299 !important;
+    }
+
+    .bg-yellowgreen-600 {
+      background: #9acd3266 !important;
+    }
+
+    .bg-yellowgreen-500 {
+      background: #9acd3233 !important;
+    }
+
+    .bg-yellowgreen-400 {
+      background: #9acd321a !important;
+    }
+
+    .bg-yellowgreen-300 {
+      background: #9acd320d !important;
+    }
+
+    .bg-yellowgreen-200 {
+      background: #9acd3208 !important;
+    }
+
+    .bg-yellowgreen-100 {
+      background: #9acd3204 !important;
+    }
+
+    .bg-yellowgreen-0 {
+      background: #9acd3200 !important;
+    }
+
+    /* Aqua colors */
+    .bg-aqua-900 {
+      background: #00ffff !important;
+    }
+
+    .bg-aqua-800 {
+      background: #00ffffcc !important;
+    }
+
+    .bg-aqua-700 {
+      background: #00ffff99 !important;
+    }
+
+    .bg-aqua-600 {
+      background: #00ffff66 !important;
+    }
+
+    .bg-aqua-500 {
+      background: #00ffff33 !important;
+    }
+
+    .bg-aqua-400 {
+      background: #00ffff1a !important;
+    }
+
+    .bg-aqua-300 {
+      background: #00ffff0d !important;
+    }
+
+    .bg-aqua-200 {
+      background: #00ffff08 !important;
+    }
+
+    .bg-aqua-100 {
+      background: #00ffff04 !important;
+    }
+
+    .bg-aqua-0 {
+      background: #00ffff00 !important;
+    }
+
+    /* Maroon colors */
+    .bg-maroon-900 {
+      background: #800000 !important;
+    }
+
+    .bg-maroon-800 {
+      background: #800000cc !important;
+    }
+
+    .bg-maroon-700 {
+      background: #80000099 !important;
+    }
+
+    .bg-maroon-600 {
+      background: #80000066 !important;
+    }
+
+    .bg-maroon-500 {
+      background: #80000033 !important;
+    }
+
+    .bg-maroon-400 {
+      background: #8000001a !important;
+    }
+
+    .bg-maroon-300 {
+      background: #8000000d !important;
+    }
+
+    .bg-maroon-200 {
+      background: #80000008 !important;
+    }
+
+    .bg-maroon-100 {
+      background: #80000004 !important;
+    }
+
+    .bg-maroon-0 {
+      background: #80000000 !important;
+    }
+
+    /* Sienna colors */
+    .bg-sienna-900 {
+      background: #a0522d !important;
+    }
+
+    .bg-sienna-800 {
+      background: #a0522dcc !important;
+    }
+
+    .bg-sienna-700 {
+      background: #a0522d99 !important;
+    }
+
+    .bg-sienna-600 {
+      background: #a0522d66 !important;
+    }
+
+    .bg-sienna-500 {
+      background: #a0522d33 !important;
+    }
+
+    .bg-sienna-400 {
+      background: #a0522d1a !important;
+    }
+
+    .bg-sienna-300 {
+      background: #a0522d0d !important;
+    }
+
+    .bg-sienna-200 {
+      background: #a0522d08 !important;
+    }
+
+    .bg-sienna-100 {
+      background: #a0522d04 !important;
+    }
+
+    .bg-sienna-0 {
+      background: #a0522d00 !important;
+    }
+
+    /* DarkGreen colors */
+    .bg-darkgreen-900 {
+      background: #006400 !important;
+    }
+
+    .bg-darkgreen-800 {
+      background: #006400cc !important;
+    }
+
+    .bg-darkgreen-700 {
+      background: #00640099 !important;
+    }
+
+    .bg-darkgreen-600 {
+      background: #00640066 !important;
+    }
+
+    .bg-darkgreen-500 {
+      background: #00640033 !important;
+    }
+
+    .bg-darkgreen-400 {
+      background: #0064001a !important;
+    }
+
+    .bg-darkgreen-300 {
+      background: #0064000d !important;
+    }
+
+    .bg-darkgreen-200 {
+      background: #00640008 !important;
+    }
+
+    .bg-darkgreen-100 {
+      background: #00640004 !important;
+    }
+
+    .bg-darkgreen-0 {
+      background: #00640000 !important;
+    }
+
+    /* Lavenderblush colors */
+    .bg-lavenderblush-900 {
+      background: #fff0f5 !important;
+    }
+
+    .bg-lavenderblush-800 {
+      background: #fff0f5cc !important;
+    }
+
+    .bg-lavenderblush-700 {
+      background: #fff0f599 !important;
+    }
+
+    .bg-lavenderblush-600 {
+      background: #fff0f566 !important;
+    }
+
+    .bg-lavenderblush-500 {
+      background: #fff0f533 !important;
+    }
+
+    .bg-lavenderblush-400 {
+      background: #fff0f51a !important;
+    }
+
+    .bg-lavenderblush-300 {
+      background: #fff0f50d !important;
+    }
+
+    .bg-lavenderblush-200 {
+      background: #fff0f508 !important;
+    }
+
+    .bg-lavenderblush-100 {
+      background: #fff0f504 !important;
+    }
+
+    .bg-lavenderblush-0 {
+      background: #fff0f500 !important;
+    }
+
+    /* YellowGreen colors */
+    .bg-yellowgreen-900 {
+      background: #9acd32 !important;
+    }
+
+    .bg-yellowgreen-800 {
+      background: #9acd32cc !important;
+    }
+
+    .bg-yellowgreen-700 {
+      background: #9acd3299 !important;
+    }
+
+    .bg-yellowgreen-600 {
+      background: #9acd3266 !important;
+    }
+
+    .bg-yellowgreen-500 {
+      background: #9acd3233 !important;
+    }
+
+    .bg-yellowgreen-400 {
+      background: #9acd321a !important;
+    }
+
+    .bg-yellowgreen-300 {
+      background: #9acd320d !important;
+    }
+
+    .bg-yellowgreen-200 {
+      background: #9acd3208 !important;
+    }
+
+    .bg-yellowgreen-100 {
+      background: #9acd3204 !important;
+    }
+
+    .bg-yellowgreen-0 {
+      background: #9acd3200 !important;
+    }
+
+    /* Olive colors */
+    .bg-olive-900 {
+      background: #808000 !important;
+    }
+
+    .bg-olive-800 {
+      background: #808000cc !important;
+    }
+
+    .bg-olive-700 {
+      background: #80800099 !important;
+    }
+
+    .bg-olive-600 {
+      background: #80800066 !important;
+    }
+
+    .bg-olive-500 {
+      background: #80800033 !important;
+    }
+
+    .bg-olive-400 {
+      background: #8080001a !important;
+    }
+
+    .bg-olive-300 {
+      background: #8080000d !important;
+    }
+
+    .bg-olive-200 {
+      background: #80800008 !important;
+    }
+
+    .bg-olive-100 {
+      background: #80800004 !important;
+    }
+
+    .bg-olive-0 {
+      background: #80800000 !important;
+    }
+
+    /* Skyblue colors */
+    .bg-skyblue-900 {
+      background: #87ceeb !important;
+    }
+
+    .bg-skyblue-800 {
+      background: #87ceebcc !important;
+    }
+
+    .bg-skyblue-700 {
+      background: #87ceeb99 !important;
+    }
+
+    .bg-skyblue-600 {
+      background: #87ceeb66 !important;
+    }
+
+    .bg-skyblue-500 {
+      background: #87ceeb33 !important;
+    }
+
+    .bg-skyblue-400 {
+      background: #87ceeb1a !important;
+    }
+
+    .bg-skyblue-300 {
+      background: #87ceeb0d !important;
+    }
+
+    .bg-skyblue-200 {
+      background: #87ceeb08 !important;
+    }
+
+    .bg-skyblue-100 {
+      background: #87ceeb04 !important;
+    }
+
+    .bg-skyblue-0 {
+      background: #87ceeb00 !important;
+    }
+
+    /* Beige colors */
+    .bg-beige-900 {
+      background: #87ceeb !important;
+    }
+
+    .bg-beige-800 {
+      background: #87ceebcc !important;
+    }
+
+    .bg-beige-700 {
+      background: #87ceeb99 !important;
+    }
+
+    .bg-beige-600 {
+      background: #87ceeb66 !important;
+    }
+
+    .bg-beige-500 {
+      background: #87ceeb33 !important;
+    }
+
+    .bg-beige-400 {
+      background: #87ceeb1a !important;
+    }
+
+    .bg-beige-300 {
+      background: #87ceeb0d !important;
+    }
+
+    .bg-beige-200 {
+      background: #87ceeb08 !important;
+    }
+
+    .bg-beige-100 {
+      background: #87ceeb04 !important;
+    }
+
+    .bg-beige-0 {
+      background: #87ceeb00 !important;
+    }
+
+    /* Salmon colors */
+    .bg-salmon-900 {
+      background: #ffa07a !important;
+    }
+
+    .bg-salmon-800 {
+      background: #ffa07acc !important;
+    }
+
+    .bg-salmon-700 {
+      background: #ffa07a99 !important;
+    }
+
+    .bg-salmon-600 {
+      background: #ffa07a66 !important;
+    }
+
+    .bg-salmon-500 {
+      background: #ffa07a33 !important;
+    }
+
+    .bg-salmon-400 {
+      background: #ffa07a1a !important;
+    }
+
+    .bg-salmon-300 {
+      background: #ffa07a0d !important;
+    }
+
+    .bg-salmon-200 {
+      background: #ffa07a08 !important;
+    }
+
+    .bg-salmon-100 {
+      background: #ffa07a04 !important;
+    }
+
+    .bg-salmon-0 {
+      background: #ffa07a00 !important;
+    }
+
+    /* Mint colors */
+    .bg-mint-900 {
+      background: #c3e8e2 !important;
+    }
+
+    .bg-mint-800 {
+      background: #c3e8e2cc !important;
+    }
+
+    .bg-mint-700 {
+      background: #c3e8e299 !important;
+    }
+
+    .bg-mint-600 {
+      background: #c3e8e266 !important;
+    }
+
+    .bg-mint-500 {
+      background: #c3e8e233 !important;
+    }
+
+    .bg-mint-400 {
+      background: #c3e8e21a !important;
+    }
+
+    .bg-mint-300 {
+      background: #c3e8e20d !important;
+    }
+
+    .bg-mint-200 {
+      background: #c3e8e208 !important;
+    }
+
+    .bg-mint-100 {
+      background: #c3e8e204 !important;
+    }
+
+    .bg-mint-0 {
+      background: #c3e8e200 !important;
+    }
+
+    /* Mintgreen colors */
+    .bg-mintgreen-900 {
+      background: #ccffcc !important;
+    }
+
+    .bg-mintgreen-800 {
+      background: #ccffcccc !important;
+    }
+
+    .bg-mintgreen-700 {
+      background: #ccffcc99 !important;
+    }
+
+    .bg-mintgreen-600 {
+      background: #ccffcc66 !important;
+    }
+
+    .bg-mintgreen-500 {
+      background: #ccffcc33 !important;
+    }
+
+    .bg-mintgreen-400 {
+      background: #ccffcc1a !important;
+    }
+
+    .bg-mintgreen-300 {
+      background: #ccffcc0d !important;
+    }
+
+    .bg-mintgreen-200 {
+      background: #ccffcc08 !important;
+    }
+
+    .bg-mintgreen-100 {
+      background: #ccffcc04 !important;
+    }
+
+    .bg-mintgreen-0 {
+      background: #ccffcc00 !important;
+    }
+
+    /* Cyan colors */
+    .bg-cyan-900 {
+      background: #e0ffff !important;
+    }
+
+    .bg-cyan-800 {
+      background: #e0ffffcc !important;
+    }
+
+    .bg-cyan-700 {
+      background: #e0ffff99 !important;
+    }
+
+    .bg-cyan-600 {
+      background: #e0ffff66 !important;
+    }
+
+    .bg-cyan-500 {
+      background: #e0ffff33 !important;
+    }
+
+    .bg-cyan-400 {
+      background: #e0ffff1a !important;
+    }
+
+    .bg-cyan-300 {
+      background: #e0ffff0d !important;
+    }
+
+    .bg-cyan-200 {
+      background: #e0ffff08 !important;
+    }
+
+    .bg-cyan-100 {
+      background: #e0ffff04 !important;
+    }
+
+    .bg-cyan-0 {
+      background: #e0ffff00 !important;
+    }
+
+    /* Lilac colors */
+    .bg-lilac-900 {
+      background: #e6ccff !important;
+    }
+
+    .bg-lilac-800 {
+      background: #e6ccffcc !important;
+    }
+
+    .bg-lilac-700 {
+      background: #e6ccff99 !important;
+    }
+
+    .bg-lilac-600 {
+      background: #e6ccff66 !important;
+    }
+
+    .bg-lilac-500 {
+      background: #e6ccff33 !important;
+    }
+
+    .bg-lilac-400 {
+      background: #e6ccff1a !important;
+    }
+
+    .bg-lilac-300 {
+      background: #e6ccff0d !important;
+    }
+
+    .bg-lilac-200 {
+      background: #e6ccff08 !important;
+    }
+
+    .bg-lilac-100 {
+      background: #e6ccff04 !important;
+    }
+
+    .bg-lilac-0 {
+      background: #e6ccff00 !important;
+    }
+
+    /* Peach colors */
+    .bg-peach-900 {
+      background: #ffe0b3 !important;
+    }
+
+    .bg-peach-800 {
+      background: #ffe0b3cc !important;
+    }
+
+    .bg-peach-700 {
+      background: #ffe0b399 !important;
+    }
+
+    .bg-peach-600 {
+      background: #ffe0b366 !important;
+    }
+
+    .bg-peach-500 {
+      background: #ffe0b333 !important;
+    }
+
+    .bg-peach-400 {
+      background: #ffe0b31a !important;
+    }
+
+    .bg-peach-300 {
+      background: #ffe0b30d !important;
+    }
+
+    .bg-peach-200 {
+      background: #ffe0b308 !important;
+    }
+
+    .bg-peach-100 {
+      background: #ffe0b304 !important;
+    }
+
+    .bg-peach-0 {
+      background: #ffe0b300 !important;
+    }
+
+    /* Coral colors */
+    .bg-coral-900 {
+      background: #ffc4c4 !important;
+    }
+
+    .bg-coral-800 {
+      background: #ffc4c4cc !important;
+    }
+
+    .bg-coral-700 {
+      background: #ffc4c499 !important;
+    }
+
+    .bg-coral-600 {
+      background: #ffc4c466 !important;
+    }
+
+    .bg-coral-500 {
+      background: #ffc4c433 !important;
+    }
+
+    .bg-coral-400 {
+      background: #ffc4c41a !important;
+    }
+
+    .bg-coral-300 {
+      background: #ffc4c40d !important;
+    }
+
+    .bg-coral-200 {
+      background: #ffc4c408 !important;
+    }
+
+    .bg-coral-100 {
+      background: #ffc4c404 !important;
+    }
+
+    .bg-coral-0 {
+      background: #ffc4c400 !important;
+    }
+
+    /* Text-Colors */
+    .text-primary-900 {
+      color: #f5f6fc !important;
+    }
+
+    .text-primary-800 {
+      color: #cdd3f1 !important;
+    }
+
+    .text-primary-700 {
+      color: #a5b0e6 !important;
+    }
+
+    .text-primary-600 {
+      color: #7d8edc !important;
+    }
+
+    .text-primary-500 {
+      color: #566bd1 !important;
+    }
+
+    .text-primary-400 {
+      color: #2e48c6 !important;
+    }
+
+    .text-primary-300 {
+      color: #273da8 !important;
+    }
+
+    .text-primary-200 {
+      color: #20328b !important;
+    }
+
+    .text-primary-100 {
+      color: #19286d !important;
+    }
+
+    .text-primary-0 {
+      color: #121d4f !important;
+    }
+
+    /* Secondary colors */
+    .text-secondary-900 {
+      color: #f2f9f8 !important;
+    }
+
+    .text-secondary-800 {
+      color: #c2e1dd !important;
+    }
+
+    .text-secondary-700 {
+      color: #91c9c2 !important;
+    }
+
+    .text-secondary-600 {
+      color: #61b2a8 !important;
+    }
+
+    .text-secondary-500 {
+      color: #309a8d !important;
+    }
+
+    .text-secondary-400 {
+      color: #008272 !important;
+    }
+
+    .text-secondary-300 {
+      color: #006f61 !important;
+    }
+
+    .text-secondary-200 {
+      color: #005b50 !important;
+    }
+
+    .text-secondary-100 {
+      color: #00483f !important;
+    }
+
+    .text-secondary-0 {
+      color: #00342e !important;
+    }
+
+    /* Tertiary colors */
+    .text-tertiary-900 {
+      color: #f8f9fb !important;
+    }
+
+    .text-tertiary-800 {
+      color: #dee4ed !important;
+    }
+
+    .text-tertiary-700 {
+      color: #c4cfe0 !important;
+    }
+
+    .text-tertiary-600 {
+      color: #a9bad2 !important;
+    }
+
+    .text-tertiary-500 {
+      color: #8fa4c4 !important;
+    }
+
+    .text-tertiary-400 {
+      color: #758fb6 !important;
+    }
+
+    .text-tertiary-300 {
+      color: #637a9b !important;
+    }
+
+    .text-tertiary-200 {
+      color: #52647f !important;
+    }
+
+    .text-tertiary-100 {
+      color: #404f64 !important;
+    }
+
+    .text-tertiary-0 {
+      color: #2f3949 !important;
+    }
+
+    /* Red colors */
+    .text-red-900 {
+      color: #c00000 !important;
+    }
+
+    .text-red-800 {
+      color: #c00000cc !important;
+    }
+
+    .text-red-700 {
+      color: #c0000099 !important;
+    }
+
+    .text-red-600 {
+      color: #c0000066 !important;
+    }
+
+    .text-red-500 {
+      color: #c0000033 !important;
+    }
+
+    .text-red-400 {
+      color: #c000001a !important;
+    }
+
+    .text-red-300 {
+      color: #c000000d !important;
+    }
+
+    .text-red-200 {
+      color: #c0000008 !important;
+    }
+
+    .text-red-100 {
+      color: #c0000004 !important;
+    }
+
+    .text-red-0 {
+      color: #c0000000 !important;
+    }
+
+    /* Green colors */
+    .text-green-900 {
+      color: #f7fbf3 !important;
+    }
+
+    .text-green-800 {
+      color: #d9eac4 !important;
+    }
+
+    .text-green-700 {
+      color: #bbda96 !important;
+    }
+
+    .text-green-600 {
+      color: #9cca67 !important;
+    }
+
+    .text-green-500 {
+      color: #7eb939 !important;
+    }
+
+    .text-green-400 {
+      color: #60a90a !important;
+    }
+
+    .text-green-300 {
+      color: #529009 !important;
+    }
+
+    .text-green-200 {
+      color: #437607 !important;
+    }
+
+    .text-green-100 {
+      color: #355d06 !important;
+    }
+
+    .text-green-0 {
+      color: #264404 !important;
+    }
+
+    /* Orange colors */
+    .text-orange-900 {
+      color: #e97132 !important;
+    }
+
+    .text-orange-800 {
+      color: #e97132cc !important;
+    }
+
+    .text-orange-700 {
+      color: #e9713299 !important;
+    }
+
+    .text-orange-600 {
+      color: #e9713266 !important;
+    }
+
+    .text-orange-500 {
+      color: #e9713233 !important;
+    }
+
+    .text-orange-400 {
+      color: #e971321a !important;
+    }
+
+    .text-orange-300 {
+      color: #e971320d !important;
+    }
+
+    .text-orange-200 {
+      color: #e9713208 !important;
+    }
+
+    .text-orange-100 {
+      color: #e9713204 !important;
+    }
+
+    .text-orange-0 {
+      color: #e9713200 !important;
+    }
+
+    /* yellow colors */
+    .text-yellow-900 {
+      color: #ffc001 !important;
+    }
+
+    .text-yellow-800 {
+      color: #ffc001cc !important;
+    }
+
+    .text-yellow-700 {
+      color: #ffc00199 !important;
+    }
+
+    .text-yellow-600 {
+      color: #ffc00166 !important;
+    }
+
+    .text-yellow-500 {
+      color: #ffc00133 !important;
+    }
+
+    .text-yellow-400 {
+      color: #ffc0011a !important;
+    }
+
+    .text-yellow-300 {
+      color: #ffc0010d !important;
+    }
+
+    .text-yellow-200 {
+      color: #ffc00108 !important;
+    }
+
+    .text-yellow-100 {
+      color: #ffc00104 !important;
+    }
+
+    .text-yellow-0 {
+      color: #ffc00100 !important;
+    }
+
+    /* Teal colors */
+    .text-teal-900 {
+      color: #80e4c3 !important;
+    }
+
+    .text-teal-800 {
+      color: #80e4c3cc !important;
+    }
+
+    .text-teal-700 {
+      color: #80e4c399 !important;
+    }
+
+    .text-teal-600 {
+      color: #80e4c366 !important;
+    }
+
+    .text-teal-500 {
+      color: #80e4c333 !important;
+    }
+
+    .text-teal-400 {
+      color: #80e4c31a !important;
+    }
+
+    .text-teal-300 {
+      color: #80e4c30d !important;
+    }
+
+    .text-teal-200 {
+      color: #80e4c308 !important;
+    }
+
+    .text-teal-100 {
+      color: #80e4c304 !important;
+    }
+
+    .text-teal-0 {
+      color: #80e4c300 !important;
+    }
+
+    /* Lavender colors */
+    .text-lavender-900 {
+      color: #d4bfff !important;
+    }
+
+    .text-lavender-800 {
+      color: #d4bfffcc !important;
+    }
+
+    .text-lavender-700 {
+      color: #d4bfff99 !important;
+    }
+
+    .text-lavender-600 {
+      color: #d4bfff66 !important;
+    }
+
+    .text-lavender-500 {
+      color: #d4bfff33 !important;
+    }
+
+    .text-lavender-400 {
+      color: #d4bfff1a !important;
+    }
+
+    .text-lavender-300 {
+      color: #d4bfff0d !important;
+    }
+
+    .text-lavender-200 {
+      color: #d4bfff08 !important;
+    }
+
+    .text-lavender-100 {
+      color: #d4bfff04 !important;
+    }
+
+    .text-lavender-0 {
+      color: #d4bfff00 !important;
+    }
+
+    /* lilac colors */
+    .text-lilac-900 {
+      color: #e6ccff !important;
+    }
+
+    .text-lilac-800 {
+      color: #e6ccffcc !important;
+    }
+
+    .text-lilac-700 {
+      color: #e6ccff99 !important;
+    }
+
+    .text-lilac-600 {
+      color: #e6ccff66 !important;
+    }
+
+    .text-lilac-500 {
+      color: #e6ccff33 !important;
+    }
+
+    .text-lilac-400 {
+      color: #e6ccff1a !important;
+    }
+
+    .text-lilac-300 {
+      color: #e6ccff0d !important;
+    }
+
+    .text-lilac-200 {
+      color: #e6ccff08 !important;
+    }
+
+    .text-lilac-100 {
+      color: #e6ccff04 !important;
+    }
+
+    .text-lilac-0 {
+      color: #e6ccff00 !important;
+    }
+
+    /* peach colors */
+    .text-peach-900 {
+      color: #ffe0b3 !important;
+    }
+
+    .text-peach-800 {
+      color: #ffe0b3cc !important;
+    }
+
+    .text-peach-700 {
+      color: #ffe0b399 !important;
+    }
+
+    .text-peach-600 {
+      color: #ffe0b366 !important;
+    }
+
+    .text-peach-500 {
+      color: #ffe0b333 !important;
+    }
+
+    .text-peach-400 {
+      color: #ffe0b31a !important;
+    }
+
+    .text-peach-300 {
+      color: #ffe0b30d !important;
+    }
+
+    .text-peach-200 {
+      color: #ffe0b308 !important;
+    }
+
+    .text-peach-100 {
+      color: #ffe0b304 !important;
+    }
+
+    .text-peach-0 {
+      color: #ffe0b300 !important;
+    }
+
+    /* coral colors */
+    .text-coral-900 {
+      color: #ffc4c4 !important;
+    }
+
+    .text-coral-800 {
+      color: #ffc4c4cc !important;
+    }
+
+    .text-coral-700 {
+      color: #ffc4c499 !important;
+    }
+
+    .text-coral-600 {
+      color: #ffc4c466 !important;
+    }
+
+    .text-coral-500 {
+      color: #ffc4c433 !important;
+    }
+
+    .text-coral-400 {
+      color: #ffc4c41a !important;
+    }
+
+    .text-coral-300 {
+      color: #ffc4c40d !important;
+    }
+
+    .text-coral-200 {
+      color: #ffc4c408 !important;
+    }
+
+    .text-coral-100 {
+      color: #ffc4c404 !important;
+    }
+
+    .text-coral-0 {
+      color: #ffc4c400 !important;
+    }
+
+    /* mint colors */
+    .text-mint-900 {
+      color: #c3e8e2 !important;
+    }
+
+    .text-mint-800 {
+      color: #c3e8e2cc !important;
+    }
+
+    .text-mint-700 {
+      color: #c3e8e299 !important;
+    }
+
+    .text-mint-600 {
+      color: #c3e8e266 !important;
+    }
+
+    .text-mint-500 {
+      color: #c3e8e233 !important;
+    }
+
+    .text-mint-400 {
+      color: #c3e8e21a !important;
+    }
+
+    .text-mint-300 {
+      color: #c3e8e20d !important;
+    }
+
+    .text-mint-200 {
+      color: #c3e8e208 !important;
+    }
+
+    .text-mint-100 {
+      color: #c3e8e204 !important;
+    }
+
+    .text-mint-0 {
+      color: #c3e8e200 !important;
+    }
+
+    /* mintgreen colors */
+    .text-mintgreen-900 {
+      color: #ccffcc !important;
+    }
+
+    .text-mintgreen-800 {
+      color: #ccffcccc !important;
+    }
+
+    .text-mintgreen-700 {
+      color: #ccffcc99 !important;
+    }
+
+    .text-mintgreen-600 {
+      color: #ccffcc66 !important;
+    }
+
+    .text-mintgreen-500 {
+      color: #ccffcc33 !important;
+    }
+
+    .text-mintgreen-400 {
+      color: #ccffcc1a !important;
+    }
+
+    .text-mintgreen-300 {
+      color: #ccffcc0d !important;
+    }
+
+    .text-mintgreen-200 {
+      color: #ccffcc08 !important;
+    }
+
+    .text-mintgreen-100 {
+      color: #ccffcc04 !important;
+    }
+
+    .text-mintgreen-0 {
+      color: #ccffcc00 !important;
+    }
+
+    /* cyan colors */
+    .text-cyan-900 {
+      color: #e0ffff !important;
+    }
+
+    .text-cyan-800 {
+      color: #e0ffffcc !important;
+    }
+
+    .text-cyan-700 {
+      color: #e0ffff99 !important;
+    }
+
+    .text-cyan-600 {
+      color: #e0ffff66 !important;
+    }
+
+    .text-cyan-500 {
+      color: #e0ffff33 !important;
+    }
+
+    .text-cyan-400 {
+      color: #e0ffff1a !important;
+    }
+
+    .text-cyan-300 {
+      color: #e0ffff0d !important;
+    }
+
+    .text-cyan-200 {
+      color: #e0ffff08 !important;
+    }
+
+    .text-cyan-100 {
+      color: #e0ffff04 !important;
+    }
+
+    .text-cyan-0 {
+      color: #e0ffff00 !important;
+    }
+
+    /* skyblue colors */
+    .text-skyblue-900 {
+      color: #87ceeb !important;
+    }
+
+    .text-skyblue-800 {
+      color: #87ceebcc !important;
+    }
+
+    .text-skyblue-700 {
+      color: #87ceeb99 !important;
+    }
+
+    .text-skyblue-600 {
+      color: #87ceeb66 !important;
+    }
+
+    .text-skyblue-500 {
+      color: #87ceeb33 !important;
+    }
+
+    .text-skyblue-400 {
+      color: #87ceeb1a !important;
+    }
+
+    .text-skyblue-300 {
+      color: #87ceeb0d !important;
+    }
+
+    .text-skyblue-200 {
+      color: #87ceeb08 !important;
+    }
+
+    .text-skyblue-100 {
+      color: #87ceeb04 !important;
+    }
+
+    .text-skyblue-0 {
+      color: #87ceeb00 !important;
+    }
+
+    /* beige colors */
+    .text-beige-900 {
+      color: #87ceeb !important;
+    }
+
+    .text-beige-800 {
+      color: #87ceebcc !important;
+    }
+
+    .text-beige-700 {
+      color: #87ceeb99 !important;
+    }
+
+    .text-beige-600 {
+      color: #87ceeb66 !important;
+    }
+
+    .text-beige-500 {
+      color: #87ceeb33 !important;
+    }
+
+    .text-beige-400 {
+      color: #87ceeb1a !important;
+    }
+
+    .text-beige-300 {
+      color: #87ceeb0d !important;
+    }
+
+    .text-beige-200 {
+      color: #87ceeb08 !important;
+    }
+
+    .text-beige-100 {
+      color: #87ceeb04 !important;
+    }
+
+    .text-beige-0 {
+      color: #87ceeb00 !important;
+    }
+
+    /* salmon colors */
+    .text-salmon-900 {
+      color: #ffa07a !important;
+    }
+
+    .text-salmon-800 {
+      color: #ffa07acc !important;
+    }
+
+    .text-salmon-700 {
+      color: #ffa07a99 !important;
+    }
+
+    .text-salmon-600 {
+      color: #ffa07a66 !important;
+    }
+
+    .text-salmon-500 {
+      color: #ffa07a33 !important;
+    }
+
+    .text-salmon-400 {
+      color: #ffa07a1a !important;
+    }
+
+    .text-salmon-300 {
+      color: #ffa07a0d !important;
+    }
+
+    .text-salmon-200 {
+      color: #ffa07a08 !important;
+    }
+
+    .text-salmon-100 {
+      color: #ffa07a04 !important;
+    }
+
+    .text-salmon-0 {
+      color: #ffa07a00 !important;
+    }
+
+    /* lavenderblush colors */
+    .text-lavenderblush-900 {
+      color: #fff0f5 !important;
+    }
+
+    .text-lavenderblush-800 {
+      color: #fff0f5cc !important;
+    }
+
+    .text-lavenderblush-700 {
+      color: #fff0f599 !important;
+    }
+
+    .text-lavenderblush-600 {
+      color: #fff0f566 !important;
+    }
+
+    .text-lavenderblush-500 {
+      color: #fff0f533 !important;
+    }
+
+    .text-lavenderblush-400 {
+      color: #fff0f51a !important;
+    }
+
+    .text-lavenderblush-300 {
+      color: #fff0f50d !important;
+    }
+
+    .text-lavenderblush-200 {
+      color: #fff0f508 !important;
+    }
+
+    .text-lavenderblush-100 {
+      color: #fff0f504 !important;
+    }
+
+    .text-lavenderblush-0 {
+      color: #fff0f500 !important;
+    }
+
+    /* yellowgreen colors */
+    .text-yellowgreen-900 {
+      color: #9acd32 !important;
+    }
+
+    .text-yellowgreen-800 {
+      color: #9acd32cc !important;
+    }
+
+    .text-yellowgreen-700 {
+      color: #9acd3299 !important;
+    }
+
+    .text-yellowgreen-600 {
+      color: #9acd3266 !important;
+    }
+
+    .text-yellowgreen-500 {
+      color: #9acd3233 !important;
+    }
+
+    .text-yellowgreen-400 {
+      color: #9acd321a !important;
+    }
+
+    .text-yellowgreen-300 {
+      color: #9acd320d !important;
+    }
+
+    .text-yellowgreen-200 {
+      color: #9acd3208 !important;
+    }
+
+    .text-yellowgreen-100 {
+      color: #9acd3204 !important;
+    }
+
+    .text-yellowgreen-0 {
+      color: #9acd3200 !important;
+    }
+
+    /* olive colors */
+    .text-olive-900 {
+      color: #808000 !important;
+    }
+
+    .text-olive-800 {
+      color: #808000cc !important;
+    }
+
+    .text-olive-700 {
+      color: #80800099 !important;
+    }
+
+    .text-olive-600 {
+      color: #80800066 !important;
+    }
+
+    .text-olive-500 {
+      color: #80800033 !important;
+    }
+
+    .text-olive-400 {
+      color: #8080001a !important;
+    }
+
+    .text-olive-300 {
+      color: #8080000d !important;
+    }
+
+    .text-olive-200 {
+      color: #80800008 !important;
+    }
+
+    .text-olive-100 {
+      color: #80800004 !important;
+    }
+
+    .text-olive-0 {
+      color: #80800000 !important;
+    }
+
+    /* maroon colors */
+    .text-maroon-900 {
+      color: #800000 !important;
+    }
+
+    .text-maroon-800 {
+      color: #800000cc !important;
+    }
+
+    .text-maroon-700 {
+      color: #80000099 !important;
+    }
+
+    .text-maroon-600 {
+      color: #80000066 !important;
+    }
+
+    .text-maroon-500 {
+      color: #80000033 !important;
+    }
+
+    .text-maroon-400 {
+      color: #8000001a !important;
+    }
+
+    .text-maroon-300 {
+      color: #8000000d !important;
+    }
+
+    .text-maroon-200 {
+      color: #80000008 !important;
+    }
+
+    .text-maroon-100 {
+      color: #80000004 !important;
+    }
+
+    .text-maroon-0 {
+      color: #80000000 !important;
+    }
+
+    /* sienna colors */
+    .text-sienna-900 {
+      color: #a0522d !important;
+    }
+
+    .text-sienna-800 {
+      color: #a0522dcc !important;
+    }
+
+    .text-sienna-700 {
+      color: #a0522d99 !important;
+    }
+
+    .text-sienna-600 {
+      color: #a0522d66 !important;
+    }
+
+    .text-sienna-500 {
+      color: #a0522d33 !important;
+    }
+
+    .text-sienna-400 {
+      color: #a0522d1a !important;
+    }
+
+    .text-sienna-300 {
+      color: #a0522d0d !important;
+    }
+
+    .text-sienna-200 {
+      color: #a0522d08 !important;
+    }
+
+    .text-sienna-100 {
+      color: #a0522d04 !important;
+    }
+
+    .text-sienna-0 {
+      color: #a0522d00 !important;
+    }
+
+    /* darkgreen colors */
+    .text-darkgreen-900 {
+      color: #006400 !important;
+    }
+
+    .text-darkgreen-800 {
+      color: #006400cc !important;
+    }
+
+    .text-darkgreen-700 {
+      color: #00640099 !important;
+    }
+
+    .text-darkgreen-600 {
+      color: #00640066 !important;
+    }
+
+    .text-darkgreen-500 {
+      color: #00640033 !important;
+    }
+
+    .text-darkgreen-400 {
+      color: #0064001a !important;
+    }
+
+    .text-darkgreen-300 {
+      color: #0064000d !important;
+    }
+
+    .text-darkgreen-200 {
+      color: #00640008 !important;
+    }
+
+    .text-darkgreen-100 {
+      color: #00640004 !important;
+    }
+
+    .text-darkgreen-0 {
+      color: #00640000 !important;
+    }
+
+    /* mediumaquamarine colors */
+    .text-mediumaquamarine-900 {
+      color: #66cdaa !important;
+    }
+
+    .text-mediumaquamarine-800 {
+      color: #66cdaacc !important;
+    }
+
+    .text-mediumaquamarine-700 {
+      color: #66cdaa99 !important;
+    }
+
+    .text-mediumaquamarine-600 {
+      color: #66cdaa66 !important;
+    }
+
+    .text-mediumaquamarine-500 {
+      color: #66cdaa33 !important;
+    }
+
+    .text-mediumaquamarine-400 {
+      color: #66cdaa1a !important;
+    }
+
+    .text-mediumaquamarine-300 {
+      color: #66cdaa0d !important;
+    }
+
+    .text-mediumaquamarine-200 {
+      color: #66cdaa08 !important;
+    }
+
+    .text-mediumaquamarine-100 {
+      color: #66cdaa04 !important;
+    }
+
+    .text-mediumaquamarine-0 {
+      color: #66cdaa00 !important;
+    }
+
+    /* yellowgreen colors */
+    .text-yellowgreen-900 {
+      color: #9acd32 !important;
+    }
+
+    .text-yellowgreen-800 {
+      color: #9acd32cc !important;
+    }
+
+    .text-yellowgreen-700 {
+      color: #9acd3299 !important;
+    }
+
+    .text-yellowgreen-600 {
+      color: #9acd3266 !important;
+    }
+
+    .text-yellowgreen-500 {
+      color: #9acd3233 !important;
+    }
+
+    .text-yellowgreen-400 {
+      color: #9acd321a !important;
+    }
+
+    .text-yellowgreen-300 {
+      color: #9acd320d !important;
+    }
+
+    .text-yellowgreen-200 {
+      color: #9acd3208 !important;
+    }
+
+    .text-yellowgreen-100 {
+      color: #9acd3204 !important;
+    }
+
+    .text-yellowgreen-0 {
+      color: #9acd3200 !important;
+    }
+
+    /* aqua colors */
+    .text-aqua-900 {
+      color: #00ffff !important;
+    }
+
+    .text-aqua-800 {
+      color: #00ffffcc !important;
+    }
+
+    .text-aqua-700 {
+      color: #00ffff99 !important;
+    }
+
+    .text-aqua-600 {
+      color: #00ffff66 !important;
+    }
+
+    .text-aqua-500 {
+      color: #00ffff33 !important;
+    }
+
+    .text-aqua-400 {
+      color: #00ffff1a !important;
+    }
+
+    .text-aqua-300 {
+      color: #00ffff0d !important;
+    }
+
+    .text-aqua-200 {
+      color: #00ffff08 !important;
+    }
+
+    .text-aqua-100 {
+      color: #00ffff04 !important;
+    }
+
+    .text-aqua-0 {
+      color: #00ffff00 !important;
+    }
+
+    /* Blue colors */
+    .text-blue-900 {
+      color: #f3f8fc !important;
+    }
+
+    .text-blue-800 {
+      color: #c6dcef !important;
+    }
+
+    .text-blue-700 {
+      color: #98c1e3 !important;
+    }
+
+    .text-blue-600 {
+      color: #6ba5d7 !important;
+    }
+
+    .text-blue-500 {
+      color: #3d8aca !important;
+    }
+
+    .text-blue-400 {
+      color: #106ebe !important;
+    }
+
+    .text-blue-300 {
+      color: #0e5ea2 !important;
+    }
+
+    .text-blue-200 {
+      color: #0b4d85 !important;
+    }
+
+    .text-blue-100 {
+      color: #093d69 !important;
+    }
+
+    .text-blue-0 {
+      color: #062c4c !important;
+    }
+
+    /* Black colors */
+    .text-black-900 {
+      color: #ffffff !important;
+    }
+
+    .text-black-800 {
+      color: #f5f5f5 !important;
+    }
+
+    .text-black-700 {
+      color: #eeeeee !important;
+    }
+
+    .text-black-600 {
+      color: #e0e0e0 !important;
+    }
+
+    .text-black-500 {
+      color: #bdbdbd !important;
+    }
+
+    .text-black-400 {
+      color: #9e9e9e !important;
+    }
+
+    .text-black-300 {
+      color: #757575 !important;
+    }
+
+    .text-black-200 {
+      color: #616161 !important;
+    }
+
+    .text-black-100 {
+      color: #424242 !important;
+    }
+
+    .text-black-0 {
+      color: #fff !important;
+    }
+  </style>
   <body>
     <div class="container-fluid">
       <div class="row">
@@ -65,6 +2842,7 @@
             >
               Create Board
             </button>
+
             <div class="button-group btn-group mt-5">
               <button
                 type="button"
@@ -99,11 +2877,113 @@
                 <img
                   src="assets/images/merge.svg"
                   width="100%"
-                  title="Merge cells (M)"
+                  title="Merge cells (Crel + Shift + Z)"
+                />
+              </button>
+              <button
+                type="button"
+                class="group-btn merge-btn"
+                id="merge-btn"
+                onclick="unmergeBlock()"
+              >
+                <img
+                  src="assets/images/unmerge.svg"
+                  width="100%"
+                  title="Unmerge cells (Crel + Shift + C)"
+                />
+              </button>
+              <button
+                type="button"
+                class="group-btn"
+                onclick="boardStyle('grid')"
+              >
+                <img
+                  src="assets/images/rectangle-grid.svg"
+                  width="100%"
+                  title="Grid Board"
+                />
+              </button>
+              <button
+                type="button"
+                class="group-btn"
+                onclick="boardStyle('split')"
+              >
+                <img
+                  src="assets/images/rectangle-split.svg"
+                  width="100%"
+                  title="Split Board"
                 />
               </button>
             </div>
-            <div class="edit-toolbar">
+            <div id="set-border" class="button-group btn-group mt-2">
+              <button
+                type="button"
+                class="group-btn border-btn"
+                onclick="borderSet('all')"
+              >
+                <img
+                  src="assets/images/b-full.svg"
+                  width="100%"
+                  title="Border Display"
+                />
+              </button>
+              <button
+                type="button"
+                class="group-btn border-btn"
+                onclick="borderSet('none')"
+              >
+                <img
+                  src="assets/images/b-empty.svg"
+                  width="100%"
+                  title="Border None"
+                />
+              </button>
+              <button
+                type="button"
+                class="group-btn border-btn"
+                onclick="borderSet('left')"
+              >
+                <img
+                  src="assets/images/b-left.svg"
+                  width="100%"
+                  title="Border Left"
+                />
+              </button>
+              <button
+                type="button"
+                class="group-btn border-btn"
+                onclick="borderSet('right')"
+              >
+                <img
+                  src="assets/images/b-right.svg"
+                  width="100%"
+                  title="Border Right"
+                />
+              </button>
+              <button
+                type="button"
+                class="group-btn border-btn"
+                onclick="borderSet('top')"
+              >
+                <img
+                  src="assets/images/b-top.svg"
+                  width="100%"
+                  title="Border Top"
+                />
+              </button>
+              <button
+                type="button"
+                class="group-btn border-btn"
+                onclick="borderSet('bottom')"
+              >
+                <img
+                  src="assets/images/b-bottom.svg"
+                  width="100%"
+                  title="Border Bottom"
+                />
+              </button>
+            </div>
+            <div class="button-group btn-group mt-2">
               <button class="edit-btn font-20" id="bold-button" title="Bold">
                 B
               </button>
@@ -114,24 +2994,52 @@
               >
                 <i>I</i>
               </button>
-              <select class="edit-btn" id="font-size-select" title="Font">
-                <option value="font-size-paragraph">Paragraph</option>
-                <option value="font-size-header-1">Header 1 (32px)</option>
-                <option value="font-size-header-2">Header 2 (24px)</option>
-                <option value="font-size-header-3">Header 3 (19px)</option>
-                <option value="font-size-header-4">Header 4 (16px)</option>
-                <option value="font-size-header-5">Header 5 (13px)</option>
-                <option value="font-size-header-6">Header 6 (11px)</option>
-              </select>
-              <select
-                class="edit-btn"
-                id="alignment-select"
-                title="Text alignment"
-              >
-                <option value="left">Left</option>
-                <option value="center">Center</option>
-                <option value="right">Right</option>
-              </select>
+            </div>
+            <div class="edit-toolbar">
+              <div class="d-flex gap-3 w-100">
+                <select
+                  class="edit-btn w-50"
+                  id="font-size-select"
+                  title="Font"
+                >
+                  <option value="font-size-paragraph">Paragraph</option>
+                  <option value="font-size-header-1">Header 1 (32px)</option>
+                  <option value="font-size-header-2">Header 2 (24px)</option>
+                  <option value="font-size-header-3">Header 3 (19px)</option>
+                  <option value="font-size-header-4">Header 4 (16px)</option>
+                  <option value="font-size-header-5">Header 5 (13px)</option>
+                  <option value="font-size-header-6">Header 6 (11px)</option>
+                </select>
+                <select
+                  class="edit-btn w-50"
+                  id="alignment-select"
+                  title="Text alignment"
+                >
+                  <option value="left">Left</option>
+                  <option value="center">Center</option>
+                  <option value="right">Right</option>
+                </select>
+              </div>
+              <div class="d-flex gap-3 w-100">
+                <select
+                  class="edit-btn w-50"
+                  id="direction-select"
+                  title="Text Direction"
+                >
+                  <option value="left">Horizontal - Clockwise</option>
+                  <option value="top">Vertical - Clockwise</option>
+                  <option value="bottom">Vertical - Anticlockwise</option>
+                </select>
+                <select
+                  class="edit-btn w-50"
+                  id="position-select"
+                  title="Text alignment"
+                >
+                  <option value="top">Top</option>
+                  <option value="middle">Middle</option>
+                  <option value="bottom">Bottom</option>
+                </select>
+              </div>
               <!-- Add more toolbar options as needed -->
             </div>
             <div class="svg-import mt-3">
@@ -151,6 +3059,15 @@
                   Save
                 </button>
               </div>
+              <div class="form-group d-none" id="svg-control">
+                <label>SVG</label>
+                <input
+                  type="range"
+                  class="form-range w-100"
+                  value="20"
+                  id="svg-control-input"
+                />
+              </div>
             </div>
             <div class="theme mt-3 mb-4">
               <label>Theme</label>
@@ -160,18 +3077,39 @@
               >
                 <option value="light">Light Theme</option>
                 <option value="dark">Dark Theme</option>
-                <option value="dark">Blue Theme</option>
-                <option value="dark">Red Theme</option>
-                <option value="dark">Green Theme</option>
-                <option value="dark">Gold Theme</option>
+                <option value="arya-blue">Arya Blue</option>
+                <option value="arya-orange">Arya Orange</option>
+                <option value="lara-dark-blue">Lara Dark Blue</option>
+                <option value="lara-dark-teal">Lara Dark Teal</option>
+                <option value="saga-green">Saga Green</option>
+                <option value="saga-orange">Saga Orange</option>
               </select>
             </div>
             <div class="border-style mb-4">
               <label>Border Style</label>
               <select class="form-select" name="border" id="border-style">
-                <option value="solid">Line</option>
-                <option value="none">None</option>
+                <option value="solid">Solid</option>
+                <option value="dotted">Dotted</option>
+                <option value="dashed">Dashed</option>
+                <option value="groove">Groove</option>
               </select>
+            </div>
+            <div class="border-style mb-4">
+              <label>Border Width</label>
+              <select class="form-select" name="border" id="border-width">
+                <option value="1">1px</option>
+                <option value="3">3px</option>
+                <option value="5">5px</option>
+              </select>
+            </div>
+            <div class="mb-3 d-flex justify-content-start align-items-center">
+              <input
+                type="checkbox"
+                class="form-check-input select-all mt-0"
+                id="select-preview"
+                name="select-preview"
+              />
+              <label for="select-preview" class="mx-2">Preview</label>
             </div>
             <div class="color-palette" id="colorPaletteContainer"></div>
             <div class="template-btn-block mb-5">
@@ -189,6 +3127,12 @@
                 onclick="exportDesign()"
               >
                 Export Design
+              </a>
+              <a
+                class="btn btn-primary w-100 export-btn"
+                onclick="exportCGSDesign()"
+              >
+                CGS Export
               </a>
             </div>
           </div>

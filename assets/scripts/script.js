@@ -21,6 +21,84 @@ config = {
 
 basicColorData = ["Background", "Text"];
 
+const defaultColorPalette = [
+  {
+    name: "red",
+    shades: [
+      "#c00000",
+      "#c00000cc",
+      "#c0000099",
+      "#c0000066",
+      "#c0000033",
+      "#c000001a",
+      "#c000000d",
+      "#c0000008",
+      "#c0000004",
+      "#c0000000",
+    ],
+  },
+  {
+    name: "yellow",
+    shades: [
+      "#ffc001",
+      "#ffc001cc",
+      "#ffc00199",
+      "#ffc00166",
+      "#ffc00133",
+      "#ffc0011a",
+      "#ffc0010d",
+      "#ffc00108",
+      "#ffc00104",
+      "#ffc00100",
+    ],
+  },
+  {
+    name: "green",
+    shades: [
+      "#f7fbf3",
+      "#d9eac4",
+      "#bbda96",
+      "#9cca67",
+      "#7eb939",
+      "#60a90a",
+      "#529009",
+      "#437607",
+      "#355d06",
+      "#264404",
+    ],
+  },
+  {
+    name: "blue",
+    shades: [
+      "#f3f8fc",
+      "#c6dcef",
+      "#98c1e3",
+      "#6ba5d7",
+      "#3d8aca",
+      "#106ebe",
+      "#0e5ea2",
+      "#0b4d85",
+      "#093d69",
+      "#062c4c",
+    ],
+  },
+  {
+    name: "black",
+    shades: [
+      "#ffffff",
+      "#F5F5F5",
+      "#EEEEEE",
+      "#E0E0E0",
+      "#BDBDBD",
+      "#9E9E9E",
+      "#757575",
+      "#616161",
+      "#424242",
+      "#000000",
+    ],
+  },
+];
+
 const colorPalette = {
   light: [
     {
@@ -68,201 +146,333 @@ const colorPalette = {
         "#2f3949",
       ],
     },
-    {
-      name: "red",
-      shades: [
-        "#fdf5f5",
-        "#f4cecf",
-        "#eba8a9",
-        "#e28184",
-        "#da5b5e",
-        "#d13438",
-        "#b22c30",
-        "#922427",
-        "#731d1f",
-        "#541516",
-      ],
-    },
-    {
-      name: "orange",
-      shades: [
-        "#fdf7f2",
-        "#f5d8c2",
-        "#edb991",
-        "#e49a61",
-        "#dc7b30",
-        "#d45c00",
-        "#b44e00",
-        "#944000",
-        "#753300",
-        "#552500",
-      ],
-    },
-    {
-      name: "green",
-      shades: [
-        "#f7fbf3",
-        "#d9eac4",
-        "#bbda96",
-        "#9cca67",
-        "#7eb939",
-        "#60a90a",
-        "#529009",
-        "#437607",
-        "#355d06",
-        "#264404",
-      ],
-    },
-    {
-      name: "blue",
-      shades: [
-        "#f3f8fc",
-        "#c6dcef",
-        "#98c1e3",
-        "#6ba5d7",
-        "#3d8aca",
-        "#106ebe",
-        "#0e5ea2",
-        "#0b4d85",
-        "#093d69",
-        "#062c4c",
-      ],
-    },
-    {
-      name: "black",
-      shades: [
-        "#ffffff",
-        "#F5F5F5",
-        "#EEEEEE",
-        "#E0E0E0",
-        "#BDBDBD",
-        "#9E9E9E",
-        "#757575",
-        "#616161",
-        "#424242",
-        "#000000",
-      ],
-    },
   ],
   dark: [
     {
-      name: "primary",
+      name: "orange",
       shades: [
-        "#f5f6fc",
-        "#cdd3f1",
-        "#a5b0e6",
-        "#7d8edc",
-        "#566bd1",
-        "#2e48c6",
-        "#273da8",
-        "#20328b",
-        "#19286d",
-        "#121d4f",
-      ],
-    },
-    {
-      name: "secondary",
-      shades: [
-        "#f2f9f8",
-        "#c2e1dd",
-        "#91c9c2",
-        "#61b2a8",
-        "#309a8d",
-        "#008272",
-        "#006f61",
-        "#005b50",
-        "#00483f",
-        "#00342e",
-      ],
-    },
-    {
-      name: "tertiary",
-      shades: [
-        "#f8f9fb",
-        "#dee4ed",
-        "#c4cfe0",
-        "#a9bad2",
-        "#8fa4c4",
-        "#758fb6",
-        "#637a9b",
-        "#52647f",
-        "#404f64",
-        "#2f3949",
-      ],
-    },
-    {
-      name: "accent",
-      shades: [
-        "#ff4d4d",
-        "#ff6666",
-        "#ff8080",
-        "#ff9999",
-        "#ffb3b3",
-        "#ffcccc",
-        "#ffe6e6",
-        "#fff2f2",
-        "#ffffff",
-        "#ffd9d9",
-      ],
-    },
-    {
-      name: "purple",
-      shades: [
-        "#2e1a47",
-        "#3c275c",
-        "#4a3471",
-        "#583f86",
-        "#674c9b",
-        "#7558b0",
-        "#8365c5",
-        "#9271da",
-        "#a07eeb",
-        "#ae8bf1",
+        "#e97132",
+        "#e97132cc",
+        "#e9713299",
+        "#e9713266",
+        "#e9713233",
+        "#e971321a",
+        "#e971320d",
+        "#e9713208",
+        "#e9713204",
+        "#e9713200",
       ],
     },
     {
       name: "teal",
       shades: [
-        "#004d4d",
-        "#006666",
-        "#008080",
-        "#009999",
-        "#00b3b3",
-        "#00cccc",
-        "#00e6e6",
-        "#00f2f2",
+        "#80e4c3",
+        "#80e4c3cc",
+        "#80e4c399",
+        "#80e4c366",
+        "#80e4c333",
+        "#80e4c31a",
+        "#80e4c30d",
+        "#80e4c308",
+        "#80e4c304",
+        "#80e4c300",
+      ],
+    },
+    {
+      name: "lavender",
+      shades: [
+        "#d4bfff",
+        "#d4bfffcc",
+        "#d4bfff99",
+        "#d4bfff66",
+        "#d4bfff33",
+        "#d4bfff1a",
+        "#d4bfff0d",
+        "#d4bfff08",
+        "#d4bfff04",
+        "#d4bfff00",
+      ],
+    },
+  ],
+  "arya-blue": [
+    {
+      name: "lilac",
+      shades: [
+        "#e6ccff",
+        "#e6ccffcc",
+        "#e6ccff99",
+        "#e6ccff66",
+        "#e6ccff33",
+        "#e6ccff1a",
+        "#e6ccff0d",
+        "#e6ccff08",
+        "#e6ccff04",
+        "#e6ccff00",
+      ],
+    },
+    {
+      name: "peach",
+      shades: [
+        "#ffe0b3",
+        "#ffe0b3cc",
+        "#ffe0b399",
+        "#ffe0b366",
+        "#ffe0b333",
+        "#ffe0b31a",
+        "#ffe0b30d",
+        "#ffe0b308",
+        "#ffe0b304",
+        "#ffe0b300",
+      ],
+    },
+    {
+      name: "coral",
+      shades: [
+        "#ffc4c4",
+        "#ffc4c4cc",
+        "#ffc4c499",
+        "#ffc4c466",
+        "#ffc4c433",
+        "#ffc4c41a",
+        "#ffc4c40d",
+        "#ffc4c408",
+        "#ffc4c404",
+        "#ffc4c400",
+      ],
+    },
+  ],
+  "arya-orange": [
+    {
+      name: "mint",
+      shades: [
+        "#c3e8e2",
+        "#c3e8e2cc",
+        "#c3e8e299",
+        "#c3e8e266",
+        "#c3e8e233",
+        "#c3e8e21a",
+        "#c3e8e20d",
+        "#c3e8e208",
+        "#c3e8e204",
+        "#c3e8e200",
+      ],
+    },
+    {
+      name: "mintgreen",
+      shades: [
+        "#ccffcc",
+        "#ccffcccc",
+        "#ccffcc99",
+        "#ccffcc66",
+        "#ccffcc33",
+        "#ccffcc1a",
+        "#ccffcc0d",
+        "#ccffcc08",
+        "#ccffcc04",
+        "#ccffcc00",
+      ],
+    },
+    {
+      name: "cyan",
+      shades: [
+        "#e0ffff",
+        "#e0ffffcc",
+        "#e0ffff99",
+        "#e0ffff66",
+        "#e0ffff33",
+        "#e0ffff1a",
+        "#e0ffff0d",
+        "#e0ffff08",
+        "#e0ffff04",
+        "#e0ffff00",
+      ],
+    },
+  ],
+  "lara-dark-blue": [
+    {
+      name: "skyblue",
+      shades: [
+        "#87ceeb",
+        "#87ceebcc",
+        "#87ceeb99",
+        "#87ceeb66",
+        "#87ceeb33",
+        "#87ceeb1a",
+        "#87ceeb0d",
+        "#87ceeb08",
+        "#87ceeb04",
+        "#87ceeb00",
+      ],
+    },
+    {
+      name: "beige",
+      shades: [
+        "#87ceeb",
+        "#87ceebcc",
+        "#87ceeb99",
+        "#87ceeb66",
+        "#87ceeb33",
+        "#87ceeb1a",
+        "#87ceeb0d",
+        "#87ceeb08",
+        "#87ceeb04",
+        "#87ceeb00",
+      ],
+    },
+    {
+      name: "salmon",
+      shades: [
+        "#FFA07A",
+        "#FFA07Acc",
+        "#FFA07A99",
+        "#FFA07A66",
+        "#FFA07A33",
+        "#FFA07A1a",
+        "#FFA07A0d",
+        "#FFA07A08",
+        "#FFA07A04",
+        "#FFA07A00",
+      ],
+    },
+  ],
+  "lara-dark-teal": [
+    {
+      name: "lavenderblush",
+      shades: [
+        "#fff0f5",
+        "#fff0f5cc",
+        "#fff0f599",
+        "#fff0f566",
+        "#fff0f533",
+        "#fff0f51a",
+        "#fff0f50d",
+        "#fff0f508",
+        "#fff0f504",
+        "#fff0f500",
+      ],
+    },
+    {
+      name: "yellowgreen",
+      shades: [
+        "#9acd32",
+        "#9acd32cc",
+        "#9acd3299",
+        "#9acd3266",
+        "#9acd3233",
+        "#9acd321a",
+        "#9acd320d",
+        "#9acd3208",
+        "#9acd3204",
+        "#9acd3200",
+      ],
+    },
+    {
+      name: "olive",
+      shades: [
+        "#808000",
+        "#808000cc",
+        "#80800099",
+        "#80800066",
+        "#80800033",
+        "#8080001a",
+        "#8080000d",
+        "#80800008",
+        "#80800004",
+        "#80800000",
+      ],
+    },
+  ],
+  "saga-green": [
+    {
+      name: "maroon",
+      shades: [
+        "#800000",
+        "#800000cc",
+        "#80000099",
+        "#80000066",
+        "#80000033",
+        "#8000001a",
+        "#8000000d",
+        "#80000008",
+        "#80000004",
+        "#80000000",
+      ],
+    },
+    {
+      name: "sienna",
+      shades: [
+        "#A0522D",
+        "#A0522Dcc",
+        "#A0522D99",
+        "#A0522D66",
+        "#A0522D33",
+        "#A0522D1a",
+        "#A0522D0d",
+        "#A0522D08",
+        "#A0522D04",
+        "#A0522D00",
+      ],
+    },
+    {
+      name: "darkgreen",
+      shades: [
+        "#006400",
+        "#006400cc",
+        "#00640099",
+        "#00640066",
+        "#00640033",
+        "#0064001a",
+        "#0064000d",
+        "#00640008",
+        "#00640004",
+        "#00640000",
+      ],
+    },
+  ],
+  "saga-orange": [
+    {
+      name: "mediumaquamarine",
+      shades: [
+        "#66CDAA",
+        "#66CDAAcc",
+        "#66CDAA99",
+        "#66CDAA66",
+        "#66CDAA33",
+        "#66CDAA1a",
+        "#66CDAA0d",
+        "#66CDAA08",
+        "#66CDAA04",
+        "#66CDAA00",
+      ],
+    },
+    {
+      name: "yellowgreen",
+      shades: [
+        "#9ACD32",
+        "#9ACD32cc",
+        "#9ACD3299",
+        "#9ACD3266",
+        "#9ACD3233",
+        "#9ACD321a",
+        "#9ACD320d",
+        "#9ACD3208",
+        "#9ACD3204",
+        "#9ACD3200",
+      ],
+    },
+    {
+      name: "aqua",
+      shades: [
         "#00ffff",
-        "#00d9d9",
-      ],
-    },
-    {
-      name: "gold",
-      shades: [
-        "#b38600",
-        "#cc9900",
-        "#e6b800",
-        "#ffcc00",
-        "#ffd633",
-        "#ffdd66",
-        "#ffe699",
-        "#fff0cc",
-        "#fff5e6",
-        "#fffaf2",
-      ],
-    },
-    {
-      name: "black",
-      shades: [
-        "#ffffff",
-        "#F5F5F5",
-        "#EEEEEE",
-        "#E0E0E0",
-        "#BDBDBD",
-        "#9E9E9E",
-        "#757575",
-        "#616161",
-        "#424242",
-        "#000000",
+        "#00ffffcc",
+        "#00ffff99",
+        "#00ffff66",
+        "#00ffff33",
+        "#00ffff1a",
+        "#00ffff0d",
+        "#00ffff08",
+        "#00ffff04",
+        "#00ffff00",
       ],
     },
   ],
@@ -272,7 +482,14 @@ const boldButton = document.getElementById("bold-button");
 const italicButton = document.getElementById("italic-button");
 const fontSizeSelect = document.getElementById("font-size-select");
 const alignmentSelect = document.getElementById("alignment-select");
+const positionSelect = document.getElementById("position-select");
+const directionSelect = document.getElementById("direction-select");
 const borderStyle = document.getElementById("border-style");
+const borderWidth = document.getElementById("border-width");
+const selectPreview = document.getElementById("select-preview");
+
+let cellWidth = 0;
+let cellHeight = 0;
 
 function createBoard() {
   const rows = document.getElementById("rows").value;
@@ -283,14 +500,19 @@ function createBoard() {
 
   for (let i = 0; i < rows; i++) {
     const row = document.createElement("tr");
+    row.id = `row-${i + 1}`;
 
     for (let j = 0; j < cols; j++) {
       const cell = document.createElement("td");
       cell.id = `cell-${i + 1}-${j + 1}`;
-      cell.className = "cell";
+      cell.className =
+        "cell border-color-default border-width-default border-style-default";
 
       cell.style.width = `${100 / cols}%`;
       cell.style.height = `${100 / rows}%`;
+
+      cellWidth = cell.style.width;
+      cellHeight = cell.style.height;
 
       cell.setAttribute("pos", j);
       cell.setAttribute("rowPos", i);
@@ -337,8 +559,8 @@ function handleMouseDown(event) {
     toggleMark(cell);
     svgBtn.disabled = true;
     document.getElementById("svg-code").value = "";
-  } else {
-    makeEditable(event.target);
+  } else if (event.target.parentElement.className.includes("cell") > -1) {
+    // makeEditable(event.target);
   }
 }
 
@@ -357,6 +579,7 @@ function handleMouseUp(event) {
   config.isMouseDown = false;
   let selectedCells = 0;
   const selectBox = document.getElementById("select-all-block");
+  const setBorder = document.getElementById("set-border");
   const cells = document.querySelectorAll("TD");
   cells.forEach((cells) => {
     if (cells.classList.contains("active")) {
@@ -366,8 +589,10 @@ function handleMouseUp(event) {
 
   if (selectedCells == 0) {
     selectBox.classList.remove("display-select-box");
+    setBorder.classList.remove("display-set-border-block");
   } else {
     selectBox.classList.add("display-select-box");
+    setBorder.classList.add("display-set-border-block");
   }
 }
 
@@ -391,18 +616,22 @@ function getColor(value, type) {
     });
   } else {
     document.querySelectorAll(".active").forEach((cell) => {
-      cell.classList.forEach((className) => {
-        if (className.startsWith("text-")) {
-          cell.classList.remove(className);
-        }
-      });
-      cell.classList.add(`text-${value}`);
-      textPalette.classList.forEach((className) => {
-        if (className.startsWith("bg-")) {
-          textPalette.classList.remove(className);
-        }
-      });
-      textPalette.classList.add(`bg-${value}`);
+      const editableContent = findEditableContent(cell);
+
+      if (editableContent) {
+        editableContent.classList.forEach((className) => {
+          if (className.startsWith("text-")) {
+            editableContent.classList.remove(className);
+          }
+        });
+        editableContent.classList.add(`text-${value}`);
+        textPalette.classList.forEach((className) => {
+          if (className.startsWith("bg-")) {
+            textPalette.classList.remove(className);
+          }
+        });
+        textPalette.classList.add(`bg-${value}`);
+      }
     });
   }
 }
@@ -442,12 +671,16 @@ function toggleMark(cell) {
           text.classList.remove(className);
         }
 
-        cell.classList.forEach((className) => {
-          if (className.startsWith("text-")) {
-            const textColor = className.substring(5);
-            text.classList.add(`bg-${textColor}`);
-          }
-        });
+        const editableContent = findEditableContent(cell);
+
+        if (editableContent) {
+          editableContent.classList.forEach((className) => {
+            if (className.startsWith("text-")) {
+              const textColor = className.substring(5);
+              text.classList.add(`bg-${textColor}`);
+            }
+          });
+        }
       });
 
       document.getElementById("Background").style.background = backgroundColor;
@@ -496,8 +729,7 @@ function mergeBlock() {
   const rowSpan = maxRow - minRow + 1;
   const colSpan = maxCol - minCol + 1;
 
-  // Calculating the initial width and height of the area to be merged
-  const parentTable = document.querySelector("table"); // Adjust selector as needed
+  const parentTable = document.querySelector("table");
   let totalWidth = 0;
   let totalHeight = 0;
 
@@ -506,7 +738,6 @@ function mergeBlock() {
     totalHeight += cell.offsetHeight;
   });
 
-  // Get the total width and height of the table to calculate percentage
   const totalTableWidth = parentTable.offsetWidth;
   const totalTableHeight = parentTable.offsetHeight;
 
@@ -540,6 +771,107 @@ function mergeBlock() {
   firstCell.style.height = `${heightPercent / colSpan}%`;
 }
 
+function unmergeBlock() {
+  const activeCells = document.querySelectorAll(".active");
+
+  if (activeCells.length !== 1) return;
+
+  const rowspan = activeCells[0].rowSpan;
+  const colspan = activeCells[0].colSpan;
+  const classList = activeCells[0].id.split("-");
+
+  const rowNum = Number(classList[1]);
+  const colNum = Number(classList[2]);
+
+  let existingElement = activeCells[0];
+
+  existingElement.style.width = cellWidth;
+  existingElement.style.height = cellHeight;
+  existingElement.rowSpan = 1;
+  existingElement.colSpan = 1;
+
+  for (let i = colNum + 1; i < colNum + colspan; i++) {
+    const newCell = document.createElement("td");
+
+    newCell.className =
+      "cell border-color-default border-width-default border-style-default";
+    newCell.id = `cell-${rowNum}-${i}`;
+    newCell.style.width = cellWidth;
+    newCell.style.height = cellHeight;
+    newCell.rowSpan = 1;
+    newCell.colSpan = 1;
+    newCell.setAttribute("pos", i - 1);
+    newCell.setAttribute("rowPos", rowNum - 1);
+
+    newCell.addEventListener("mousedown", handleMouseDown);
+    newCell.addEventListener("mouseover", handleMouseOver);
+    newCell.addEventListener("mouseup", handleMouseUp);
+
+    newCell.addEventListener("click", () => {
+      if (config.mouseType === "edit") {
+        config.editableTD = newCell.id;
+        makeEditable(newCell);
+      }
+    });
+
+    existingElement.insertAdjacentElement("afterend", newCell);
+
+    existingElement = newCell;
+  }
+
+  if (rowspan > 1) {
+    for (let i = rowNum + 1; i < rowNum + rowspan; i++) {
+      let nextRowElement = null;
+      let parentElement = document.getElementById(`row-${i}`);
+
+      for (let j = 1; j < colNum; j++) {
+        if (document.getElementById(`cell-${i}-${j}`)) {
+          nextRowElement = document.getElementById(`cell-${i}-${j}`);
+        }
+      }
+
+      for (let k = colNum; k < colNum + colspan; k++) {
+        const newCell = document.createElement("td");
+
+        newCell.className =
+          "cell border-color-default border-style-default border-width-default";
+        newCell.id = `cell-${i}-${k}`;
+        newCell.style.width = cellWidth;
+        newCell.style.height = cellHeight;
+        newCell.rowSpan = 1;
+        newCell.colSpan = 1;
+        newCell.setAttribute("pos", k - 1);
+        newCell.setAttribute("rowPos", i - 1);
+
+        newCell.addEventListener("mousedown", handleMouseDown);
+        newCell.addEventListener("mouseover", handleMouseOver);
+        newCell.addEventListener("mouseup", handleMouseUp);
+
+        newCell.addEventListener("click", () => {
+          if (config.mouseType === "edit") {
+            config.editableTD = newCell.id;
+            makeEditable(newCell);
+          }
+        });
+
+        if (nextRowElement) {
+          nextRowElement.insertAdjacentElement("afterend", newCell);
+        } else {
+          parentElement.prepend(newCell);
+        }
+
+        nextRowElement = newCell;
+      }
+    }
+  }
+
+  activeCells.forEach((cell) => {
+    cell.classList.remove("active");
+    const mark = cell.querySelector(".mark");
+    if (mark) mark.remove();
+  });
+}
+
 function canMerge(selectedCells) {
   if (selectedCells.length <= 1) return false;
 
@@ -563,17 +895,14 @@ function rgbOrRgbaToHex(color) {
   const match = color.match(regex);
 
   if (!match) {
-    return null; // If the input format does not match, return null
+    return null;
   }
 
-  // Extract RGB values
   const r = parseInt(match[1], 10);
   const g = parseInt(match[2], 10);
   const b = parseInt(match[3], 10);
-  // If an alpha value is provided, parse it, otherwise assume full opacity (1)
   const a = match[4] !== undefined ? parseFloat(match[4]) : 1.0;
 
-  // Convert decimal values to hex
   const rHex = r.toString(16).padStart(2, "0");
   const gHex = g.toString(16).padStart(2, "0");
   const bHex = b.toString(16).padStart(2, "0");
@@ -584,7 +913,6 @@ function rgbOrRgbaToHex(color) {
           .toString(16)
           .padStart(2, "0");
 
-  // Return the hexadecimal color code
   return `#${rHex}${gHex}${bHex}${aHex}`;
 }
 
@@ -625,7 +953,22 @@ function makeEditable(cell) {
     document.getElementById("svg-code").value = "";
   } else {
     svgBtn.disabled = false;
-    document.getElementById("svg-code").value = cell.innerHTML;
+
+    // set the svg code
+    let svgElement = null;
+    const element = document.createElement("div");
+    element.innerHTML = cell.innerHTML;
+
+    element.childNodes.forEach((child) => {
+      if (child && child.className && child.className.includes("svg-block")) {
+        svgElement = child;
+      }
+    });
+
+    // document.getElementById("svg-code").value = cell.innerHTML;
+    document.getElementById("svg-code").value = svgElement
+      ? svgElement.innerHTML
+      : "";
   }
   const computedStyle = window.getComputedStyle(cell);
   const fontWeight = computedStyle.getPropertyValue("font-weight");
@@ -698,12 +1041,92 @@ function makeEditable(cell) {
     }
   }
 
-  cell.contentEditable = true;
-  cell.focus();
+  const svgControlGroup = document.getElementById("svg-control");
+  let svgElement = null;
 
-  cell.addEventListener("blur", () => {
-    cell.contentEditable = false;
+  if (cell.childNodes.length > 0) {
+    cell.childNodes.forEach((child) => {
+      if (child.className.includes("svg-block")) {
+        svgElement = child.children[0];
+      }
+    });
+
+    if (svgElement) {
+      svgControlGroup.classList.replace("d-none", "d-block");
+    } else {
+      svgControlGroup.classList.replace("d-block", "d-none");
+    }
+  } else {
+    svgControlGroup.classList.replace("d-block", "d-none");
+  }
+
+  if (svgElement) {
+    svgControlListener(svgElement.parentElement);
+  }
+
+  let existingEditableContent = null;
+
+  cell.childNodes.forEach((child) => {
+    if (child.className.includes("editable-content")) {
+      existingEditableContent = child;
+    }
   });
+
+  const newEditableContent = document.createElement("div");
+  newEditableContent.className = "editable-content";
+
+  if (!existingEditableContent) {
+    newEditableContent.contentEditable = true;
+    cell.appendChild(newEditableContent);
+    newEditableContent.focus();
+    newEditableContent.addEventListener("blur", () => {
+      newEditableContent.contentEditable = false;
+    });
+  } else {
+    existingEditableContent.contentEditable = true;
+    existingEditableContent.focus();
+    existingEditableContent.addEventListener("blur", (e) => {
+      e.target.contentEditable = false;
+    });
+  }
+
+  // cell.contentEditable = true;
+  // cell.focus();
+}
+
+const svgControlListener = (element) => {
+  const svgControl = document.getElementById("svg-control-input");
+
+  if (svgControl.inputEventHandler) {
+    svgControl.removeEventListener("input", svgControl.inputEventHandler);
+  }
+
+  const inputEventHandler = (e) => {
+    element.style.height = `${e.target.value}%`;
+  };
+
+  svgControl.inputEventHandler = inputEventHandler;
+  svgControl.addEventListener("input", inputEventHandler);
+
+  svgControl.value = element.style.height
+    ? element.style.height.slice(0, -1)
+    : 100;
+
+  const svgElement = document.querySelector(`#${config.editableTD} svg`);
+};
+
+function findEditableContent(cell) {
+  let editableContent = null;
+
+  if (cell.childNodes) {
+    cell.childNodes.forEach((child) => {
+      if (child.className && child.className.includes("editable-content")) {
+        editableContent = child;
+      }
+    });
+  }
+
+  return editableContent;
 }
 
 boldButton.addEventListener("click", function () {
@@ -743,42 +1166,135 @@ fontSizeSelect.addEventListener("change", function (e) {
   editCell.classList.add(e.target.value);
 });
 
-borderStyle.addEventListener("change", function (e) {
-  const borderTD = document.querySelectorAll(".cell");
-  borderTD.forEach((borderTD) => {
-    const borderClass = document.getElementById(borderTD.id);
-    borderClass.classList.forEach((className) => {
-      if (className.startsWith("border-style-")) {
-        borderClass.classList.remove(className);
-      }
+selectPreview.addEventListener("change", function (e) {
+  const checked = e.target.checked;
 
-      if (e.target.value == "solid") {
-        borderTD.classList.add("border-style-display");
-      } else {
-        borderTD.classList.add("border-style-none");
+  document.querySelectorAll(".cell").forEach((cell) => {
+    cell.className.split(" ").forEach((className) => {
+      if (className.includes("border-width-default")) {
+        if (checked) {
+          cell.classList.remove(className);
+        }
+      } else if (!checked) {
+        cell.classList.add("border-width-default");
       }
     });
   });
 });
 
+borderWidth.addEventListener("change", function (e) {
+  const activeCells = document.querySelectorAll(".active");
+
+  activeCells.forEach((cell) => {
+    cell.className.split(" ").forEach((className) => {
+      if (className.includes("border-width")) {
+        cell.classList.remove(className);
+      }
+    });
+
+    cell.classList.add(`border-width-${e.target.value}`);
+  });
+});
+
+borderStyle.addEventListener("change", function (e) {
+  const activeCells = document.querySelectorAll(".active");
+
+  activeCells.forEach((cell) => {
+    cell.className.split(" ").forEach((className) => {
+      if (className.includes("border-style")) {
+        cell.classList.remove(className);
+      }
+    });
+
+    cell.classList.add(`border-style-${e.target.value}`);
+  });
+});
+
+directionSelect.addEventListener("change", function (e) {
+  const editCell = document.getElementById(config.editableTD);
+
+  const direction = e.target.value;
+
+  let editableContent = findEditableContent(editCell);
+
+  const alignmentMap = {
+    top: "text-alignment-tb",
+    bottom: "text-alignment-bt",
+    right: "text-alignment-rl",
+  };
+
+  if (editableContent) {
+    editableContent.classList.forEach((className) => {
+      if (className.includes("text-alignment")) {
+        editableContent.classList.remove(className);
+      }
+    });
+
+    editableContent.classList.add(alignmentMap[direction]);
+  }
+});
+
 alignmentSelect.addEventListener("change", function (e) {
   const editCell = document.getElementById(config.editableTD);
+
   editCell.style.textAlign = e.target.value;
+});
+
+positionSelect.addEventListener("change", function (e) {
+  const editCell = document.getElementById(config.editableTD);
+
+  const editableContent = findEditableContent(editCell);
+
+  const value = e.target.value;
+
+  if (editableContent) {
+    const alignmentMap = {
+      top: "start",
+      bottom: "end",
+      center: "center",
+    };
+
+    editableContent.style.alignContent = alignmentMap[value] || "center";
+  }
 });
 
 document.addEventListener("DOMContentLoaded", function () {
   reRenderColorPalette();
 });
 
+document.addEventListener("keydown", function (event) {
+  if (
+    event.ctrlKey &&
+    event.shiftKey &&
+    (event.key === "Z" || event.key === "z")
+  ) {
+    event.preventDefault();
+    mergeBlock();
+  }
+});
+
+document.addEventListener("keydown", function (event) {
+  if (
+    event.ctrlKey &&
+    event.shiftKey &&
+    (event.key === "C" || event.key === "c")
+  ) {
+    event.preventDefault();
+    unmergeBlock();
+  }
+});
+
 function reRenderColorPalette() {
   const container = document.getElementById("colorPaletteContainer");
-  const rows = colorPalette[config.themeStyle].length;
+  const rows = [...colorPalette[config.themeStyle], ...defaultColorPalette]
+    .length;
+
   let htmlContent = "";
 
   for (let i = 0; i < 2; i++) {
     htmlContent += `
           <div class="palette">
-              <label class="palette-label">${basicColorData[i]} Color</label>
+              <label class="palette-label">Cell ${basicColorData[i]} Colour</label>
               <div class="color-palette-block" id="${basicColorData[i]}"></div>
           </div>
       `;
@@ -788,25 +1304,17 @@ function reRenderColorPalette() {
   document.querySelectorAll(".color-palette-block").forEach((block, index) => {
     let gridHtml = '<div class="color-grid" style="display: none;">';
     for (let row = 0; row < rows; row++) {
-      for (
-        let col = 0;
-        col < colorPalette[config.themeStyle][row].shades.length;
-        col++
-      ) {
-        gridHtml += `<button class="color-button bg-${
-          colorPalette[config.themeStyle][row].name
-        }-${
-          (Math.abs(col - colorPalette[config.themeStyle][row].shades.length) -
-            1) *
-          100
-        }" data-id='${colorPalette[config.themeStyle][row].name}-${
-          (Math.abs(col - colorPalette[config.themeStyle][row].shades.length) -
-            1) *
-          100
-        }' onclick="getColor('${colorPalette[config.themeStyle][row].name}-${
-          (Math.abs(col - colorPalette[config.themeStyle][row].shades.length) -
-            1) *
-          100
+      const colors = [
+        ...colorPalette[config.themeStyle],
+        ...defaultColorPalette,
+      ];
+      for (let col = 0; col < colors[row].shades.length; col++) {
+        gridHtml += `<button class="color-button bg-${colors[row].name}-${
+          (Math.abs(col - colors[row].shades.length) - 1) * 100
+        }" data-id='${colors[row].name}-${
+          (Math.abs(col - colors[row].shades.length) - 1) * 100
+        }' onclick="getColor('${colors[row].name}-${
+          (Math.abs(col - colors[row].shades.length) - 1) * 100
         }', '${basicColorData[index]}')"></button>`;
       }
     }
@@ -841,13 +1349,8 @@ function reRenderColorPalette() {
 }
 
 function changeTheme(value) {
-  if (value === "dark") {
-    document.getElementById("theme-style").href = "assets/styles/dark.css";
-    document.getElementById("theme-style").setAttribute("data-id", value);
-  } else if (value === "light") {
-    document.getElementById("theme-style").href = "assets/styles/light.css";
-    document.getElementById("theme-style").setAttribute("data-id", value);
-  }
+  document.getElementById("theme-style").href = `assets/styles/${value}.css`;
+  document.getElementById("theme-style").setAttribute("data-id", value);
   config.themeStyle = value;
   reRenderColorPalette();
 }
@@ -882,10 +1385,10 @@ function exportDesign() {
     <head><meta charset='utf-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1' />
     <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet' />
-    <link id='external-style' href='assets/styles/style.css' rel='stylesheet' />
+    <link id='external-style' href='assets/styles/work-board.css' rel='stylesheet' />
     <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js'></script>
     <link id='theme-style' href='assets/styles/${theme}.css' data-id='${theme}' rel='stylesheet' />
-    <head/>
+    </head>
       <body>
         ${tableHtml}
       </body>
@@ -900,31 +1403,39 @@ function exportDesign() {
   downloadLink.click();
 }
 
+function exportCGSDesign() {
+  const tableHtml = document.getElementById("work-table").outerHTML;
+
+  const htmlContent = `<body>${tableHtml}</body>`;
+
+  const htmlBlob = new Blob([htmlContent], { type: "text/html" });
+  const htmlLink = document.createElement("a");
+  htmlLink.href = URL.createObjectURL(htmlBlob);
+  htmlLink.download = "cgs.html";
+  htmlLink.click();
+
+  const styleHtml = document.getElementById("work-board-style").innerHTML;
+
+  const styleBlob = new Blob([styleHtml], { type: "text/css" });
+  const styleLink = document.createElement("a");
+  styleLink.href = URL.createObjectURL(styleBlob);
+  styleLink.download = "cgs.css";
+  styleLink.click();
+}
+
 function importSVGToContent() {
   if (config.editableTD === "") return;
   const svgTextArea = document.getElementById("svg-code");
   const tdBlock = document.getElementById(config.editableTD);
 
-  // Remove existing elements with class "svg-block"
   const svgBlocks = tdBlock.querySelectorAll(".svg-block");
   svgBlocks.forEach((block) => {
     block.parentNode.removeChild(block);
   });
 
   let svgTextAreaDom = document.createElement("div");
-  let isEditableContent = false;
 
   svgTextAreaDom.innerHTML = svgTextArea.value;
-
-  for (let i = svgTextAreaDom.childNodes.length - 1; i >= 0; i--) {
-    if (
-      svgTextAreaDom.childNodes[i].className &&
-      svgTextAreaDom.childNodes[i].className === "editable-content"
-    ) {
-      isEditableContent = true;
-      svgTextAreaDom.removeChild(svgTextAreaDom.childNodes[i]);
-    }
-  }
 
   const updateSvgElement = (element) => {
     for (let i = 0; i < element.length; i++) {
@@ -938,17 +1449,67 @@ function importSVGToContent() {
 
   svgTextAreaDom = updateSvgElement(svgTextAreaDom.childNodes);
 
-  // Add new content
   const newSvgBlock = document.createElement("div");
   newSvgBlock.className = "svg-block";
   newSvgBlock.appendChild(svgTextAreaDom);
-  tdBlock.insertBefore(newSvgBlock, tdBlock.firstChild);
 
-  if (!isEditableContent) {
-    const newEditableBlock = document.createElement("div");
-    newEditableBlock.contentEditable = true;
-    newEditableBlock.className = "editable-content";
-    tdBlock.insertBefore(newEditableBlock, tdBlock.firstChild);
+  const svgControlGroup = document.getElementById("svg-control");
+  svgControlGroup.classList.replace("d-none", "d-block");
+  svgControlListener(newSvgBlock);
+
+  tdBlock.insertBefore(newSvgBlock, tdBlock.firstChild);
+}
+
+function boardStyle(type) {
+  if (type == "grid") {
+    document.getElementById("work-table").style.borderCollapse = "separate";
+  } else {
+    document.getElementById("work-table").style.borderCollapse = "collapse";
+  }
+}
+
+function borderSet(value) {
+  if (value == "all" || value == "none") {
+    document.querySelectorAll(".active").forEach((cell) => {
+      cell.className.split(" ").forEach((className) => {
+        if (className.startsWith("border-set")) {
+          cell.classList.remove(className);
+        }
+      });
+
+      if (value === "all") {
+        cell.classList.add("border-width-1");
+      }
+
+      if (value === "none") {
+        cell.className.split(" ").forEach((className) => {
+          if (
+            className.includes("border-width") ||
+            className.includes("border-style")
+          ) {
+            cell.classList.remove(className);
+          }
+        });
+
+        cell.classList.add("border-width-default");
+        cell.classList.add("border-style-solid");
+      }
+
+      cell.classList.add(`border-set-${value}`);
+    });
+  } else {
+    document.querySelectorAll(".active").forEach((cell) => {
+      cell.classList.forEach((className) => {
+        if (
+          className.startsWith("border-set-all") ||
+          className.startsWith("border-set-none")
+        ) {
+          cell.classList.remove(className);
+        }
+      });
+      cell.classList.add("border-width-1");
+      cell.classList.add(`border-set-${value}`);
+    });
   }
 }
 
