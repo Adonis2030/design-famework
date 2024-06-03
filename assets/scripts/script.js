@@ -491,6 +491,20 @@ const selectPreview = document.getElementById("select-preview");
 let cellWidth = 0;
 let cellHeight = 0;
 
+function confirmCreateBoard() {
+  const content = document.getElementById("work-board").innerHTML;
+  if (content !== "") {
+    const userResponse = confirm("Do you want to proceed?");
+    if (userResponse) {
+      createBoard();
+    } else {
+      return;
+    }
+  } else {
+    createBoard();
+  }
+}
+
 function createBoard() {
   const rows = document.getElementById("rows").value;
   const cols = document.getElementById("cols").value;
