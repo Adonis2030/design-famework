@@ -19,7 +19,7 @@ config = {
   },
 };
 
-basicColorData = ["Background", "Text"];
+basicColorData = ["Background", "Text", "Border"];
 
 const defaultColorPalette = [
   {
@@ -613,6 +613,7 @@ function handleMouseUp(event) {
 function getColor(value, type) {
   const bgPalette = document.getElementById("Background");
   const textPalette = document.getElementById("Text");
+  const borderPalette = document.getElementById("Border");
   if (type == "Background") {
     document.querySelectorAll(".active").forEach((cell) => {
       cell.classList.forEach((className) => {
@@ -627,6 +628,45 @@ function getColor(value, type) {
         }
       });
       bgPalette.classList.add(`bg-${value}`);
+    });
+  } else if (type == "Border") {
+    document.querySelectorAll(".active").forEach((cell) => {
+      let classList = [];
+
+      cell.classList.forEach((className) => {
+        if (className.includes('border-set-')) {
+          classList = [...classList, className];
+        }
+      });
+
+      classList.forEach((className) => {
+        const borderSet = className.split('-')[2];
+        
+        const tempElement = document.createElement('div');
+
+        tempElement.className = `border-color-${value}`;
+
+        document.body.appendChild(tempElement);
+
+        const computedStyle = window.getComputedStyle(tempElement);
+
+        const color = computedStyle.borderColor;
+
+        cell.style.setProperty(`border-${borderSet}-color`, color, 'important');
+      });
+
+      cell.classList.forEach((className) => {
+        if (className.startsWith("border-set-color-")) {
+          cell.classList.remove(className);
+        }
+      });
+      cell.classList.add(`border-set-color-${value}`);
+      borderPalette.classList.forEach((className) => {
+        if (className.startsWith("bg-")) {
+          borderPalette.classList.remove(className);
+        }
+      });
+      borderPalette.classList.add(`bg-${value}`);
     });
   } else {
     document.querySelectorAll(".active").forEach((cell) => {
@@ -667,6 +707,23 @@ function toggleMark(cell) {
 
       const background = document.getElementById("Background");
       const text = document.getElementById("Text");
+      const border = document.getElementById("Border");
+
+      let defaultBorderWidth = 1;
+      cell.classList.forEach((className) => {
+        if (className.startsWith('border-width-') && className !== 'border-width-default') {
+          defaultBorderWidth = className.split('-')[2]; 
+        }
+      });
+      borderWidth.value = defaultBorderWidth;
+
+      let defaultBorderStyle = 'solid';
+      cell.classList.forEach((className) => {
+        if (className.startsWith('border-style-') && className !== 'border-style-default') {
+          defaultBorderStyle = className.split('-')[2]; 
+        }
+      });
+      borderStyle.value = defaultBorderStyle;
 
       background.classList.forEach((className) => {
         if (className.startsWith("bg-")) {
@@ -676,6 +733,19 @@ function toggleMark(cell) {
         cell.classList.forEach((className) => {
           if (className.startsWith("bg-")) {
             background.classList.add(className);
+          }
+        });
+      });
+
+      border.classList.forEach((className) => {
+        if (className.startsWith("bg-")) {
+          border.classList.remove(className);
+        }
+
+        cell.classList.forEach((className) => {
+          if (className.startsWith("border-set-color-")) {
+            const textColor = className.substring(17);
+            border.classList.add(`bg-${textColor}`);
           }
         });
       });
@@ -1184,6 +1254,12 @@ selectPreview.addEventListener("change", function (e) {
   const checked = e.target.checked;
 
   document.querySelectorAll(".cell").forEach((cell) => {
+    if (checked) {
+      cell.classList.add('border-transparent');
+    } else {
+      cell.classList.remove('border-transparent');
+    }
+
     cell.className.split(" ").forEach((className) => {
       if (className.includes("border-width-default")) {
         if (checked) {
@@ -1305,7 +1381,7 @@ function reRenderColorPalette() {
 
   let htmlContent = "";
 
-  for (let i = 0; i < 2; i++) {
+  for (let i = 0; i < 3; i++) {
     htmlContent += `
           <div class="palette">
               <label class="palette-label">Cell ${basicColorData[i]} Colour</label>

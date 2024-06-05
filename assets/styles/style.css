@@ -1,15 +1,3 @@
-/* :root {
-  --light: #ffffff;
-  --dark: #000000;
-  --grey: #424242;
-  --dark-12: #0000001f;
-  --dark-3: #00000033;
-  --active: #8b8b8b;
-  --lightBorder: #273da8;
-  --darkBorder: #ffffff;
-  --defaultColor: #d3d4d5;
-} */
-
 .border-color-default {
   border-color: #d6d6d6;
 }
@@ -165,4 +153,9 @@ button.btn-active {
 /* Set Border Block */
 .display-set-border-block {
   display: flex !important;
+}
+
+.cell:hover {
+  transition: box-shadow .2s;
+  box-shadow: 0px 0px 6px 2px #c7bbbb;
 }
