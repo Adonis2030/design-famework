@@ -490,6 +490,10 @@ const selectPreview = document.getElementById("select-preview");
 
 let cellWidth = 0;
 let cellHeight = 0;
+let tableConfig = {
+  rows: 0,
+  cols: 0,
+};
 
 function confirmCreateBoard() {
   const content = document.getElementById("work-board").innerHTML;
@@ -508,6 +512,11 @@ function confirmCreateBoard() {
 function createBoard() {
   const rows = document.getElementById("rows").value;
   const cols = document.getElementById("cols").value;
+
+  tableConfig = {
+    rows,
+    cols,
+  };
 
   const table = document.createElement("table");
   table.setAttribute("id", "work-table");
@@ -533,6 +542,19 @@ function createBoard() {
       cell.addEventListener("mousedown", handleMouseDown);
       cell.addEventListener("mouseover", handleMouseOver);
       cell.addEventListener("mouseup", handleMouseUp);
+      cell.addEventListener("contextmenu", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const contextMenu = document.getElementById("custom-contextmenu");
+        contextMenu.style.opacity = 1;
+        contextMenu.style.visibility = "visible";
+        contextMenu.style.left = e.pageX + "px";
+        contextMenu.style.top = e.pageY + "px";
+
+        const id = e.target.id.split("-");
+        contextMenu.setAttribute("data-row", id[2]);
+        contextMenu.setAttribute("data-col", id[1]);
+      });
 
       cell.addEventListener("click", () => {
         if (config.mouseType === "edit") {
@@ -548,6 +570,13 @@ function createBoard() {
   const workBoard = document.getElementById("work-board");
   workBoard.innerHTML = "";
   workBoard.appendChild(table);
+
+  // $("#work-table").colResizable({
+  //   liveDrag:true,
+  //   gripInnerHtml:"<div class='grip'></div>",
+  //   draggingClass:"dragging",
+  //   resizeMode:'fit'
+  // });
 }
 
 function handleMouseDown(event) {
@@ -634,15 +663,15 @@ function getColor(value, type) {
       let classList = [];
 
       cell.classList.forEach((className) => {
-        if (className.includes('border-set-')) {
+        if (className.includes("border-set-")) {
           classList = [...classList, className];
         }
       });
 
       classList.forEach((className) => {
-        const borderSet = className.split('-')[2];
-        
-        const tempElement = document.createElement('div');
+        const borderSet = className.split("-")[2];
+
+        const tempElement = document.createElement("div");
 
         tempElement.className = `border-color-${value}`;
 
@@ -652,7 +681,7 @@ function getColor(value, type) {
 
         const color = computedStyle.borderColor;
 
-        cell.style.setProperty(`border-${borderSet}-color`, color, 'important');
+        cell.style.setProperty(`border-${borderSet}-color`, color, "important");
       });
 
       cell.classList.forEach((className) => {
@@ -711,16 +740,22 @@ function toggleMark(cell) {
 
       let defaultBorderWidth = 1;
       cell.classList.forEach((className) => {
-        if (className.startsWith('border-width-') && className !== 'border-width-default') {
-          defaultBorderWidth = className.split('-')[2]; 
+        if (
+          className.startsWith("border-width-") &&
+          className !== "border-width-default"
+        ) {
+          defaultBorderWidth = className.split("-")[2];
         }
       });
       borderWidth.value = defaultBorderWidth;
 
-      let defaultBorderStyle = 'solid';
+      let defaultBorderStyle = "solid";
       cell.classList.forEach((className) => {
-        if (className.startsWith('border-style-') && className !== 'border-style-default') {
-          defaultBorderStyle = className.split('-')[2]; 
+        if (
+          className.startsWith("border-style-") &&
+          className !== "border-style-default"
+        ) {
+          defaultBorderStyle = className.split("-")[2];
         }
       });
       borderStyle.value = defaultBorderStyle;
@@ -938,6 +973,20 @@ function unmergeBlock() {
           }
         });
 
+        newCell.addEventListener("contextmenu", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          const contextMenu = document.getElementById("custom-contextmenu");
+          contextMenu.style.opacity = 1;
+          contextMenu.style.visibility = "visible";
+          contextMenu.style.left = e.pageX + "px";
+          contextMenu.style.top = e.pageY + "px";
+
+          const id = e.target.id.split("-");
+          contextMenu.setAttribute("data-row", id[2]);
+          contextMenu.setAttribute("data-col", id[1]);
+        });
+
         if (nextRowElement) {
           nextRowElement.insertAdjacentElement("afterend", newCell);
         } else {
@@ -954,6 +1003,157 @@ function unmergeBlock() {
     const mark = cell.querySelector(".mark");
     if (mark) mark.remove();
   });
+}
+
+function insertRow() {
+  const contextMenu = document.getElementById("custom-contextmenu");
+  const row = contextMenu.getAttribute("data-row");
+
+  document.querySelectorAll(".cell").forEach((cell) => {
+    const ids = cell.id.split("-");
+    const column = Number(ids[1]);
+    const cellRow = Number(ids[2]);
+
+    if (cellRow > row) {
+      cell.id = `cell-${column}-${cellRow + 1}`;
+      cell.setAttribute("pos", Number(cell.getAttribute("pos")) + 1);
+    }
+  });
+
+  for (let i = 1; i <= tableConfig.cols; i++) {
+    let flag = false;
+    document.getElementById(`row-${i}`).childNodes.forEach((child) => {
+      if (flag) {
+        const newCell = document.createElement("td");
+        newCell.className =
+          "cell border-color-default border-width-default border-style-default";
+        newCell.id = `cell-${i}-${Number(child.id.split("-")[2]) - 1}`;
+        newCell.style.width = `${100 / tableConfig.rows + 1}%`;
+        newCell.style.height = cellHeight;
+        newCell.rowSpan = 1;
+        newCell.colSpan = 1;
+
+        newCell.setAttribute("pos", Number(child.id.split("-")[2]) - 2);
+        newCell.setAttribute("rowPos", i - 1);
+
+        newCell.addEventListener("mousedown", handleMouseDown);
+        newCell.addEventListener("mouseover", handleMouseOver);
+        newCell.addEventListener("mouseup", handleMouseUp);
+
+        newCell.addEventListener("click", () => {
+          if (config.mouseType === "edit") {
+            config.editableTD = newCell.id;
+            makeEditable(newCell);
+          }
+        });
+
+        newCell.addEventListener("contextmenu", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          const contextMenu = document.getElementById("custom-contextmenu");
+          contextMenu.style.opacity = 1;
+          contextMenu.style.visibility = "visible";
+          contextMenu.style.left = e.pageX + "px";
+          contextMenu.style.top = e.pageY + "px";
+
+          const id = e.target.id.split("-");
+          contextMenu.setAttribute("data-row", id[2]);
+          contextMenu.setAttribute("data-col", id[1]);
+        });
+
+        child.parentNode.insertBefore(newCell, child);
+        flag = false;
+      } else if (child.id === `cell-${i}-${row}`) {
+        flag = true;
+      }
+    });
+  }
+
+  document.querySelectorAll(".cell").forEach((cell) => {
+    const originCellWidth = Number(
+      cell.style.width.slice(0, cell.style.width.length - 1)
+    );
+    const cellWidthNumber = Number(cellWidth.slice(0, cellWidth.length - 1));
+    cell.style.width = `${100 / (Number(tableConfig.rows) + 1)}%`;
+    // cell.style.width = `${(100 / tableConfig.rows + 1) * (originCellWidth / cellWidthNumber)}%`;
+    // cellWidth = `${(100 / tableConfig.rows + 1) * (originCellWidth / cellWidthNumber)}%`;
+  });
+
+  cellWidth = `${100 / (Number(tableConfig.rows) + 1)}%`;
+  tableConfig = {
+    ...tableConfig,
+    rows: tableConfig.rows + 1,
+  };
+}
+
+function insertCol() {
+  const contextMenu = document.getElementById("custom-contextmenu");
+  const col = Number(contextMenu.getAttribute("data-col"));
+
+  document.querySelectorAll(".cell").forEach((cell) => {
+    const ids = cell.id.split("-");
+    const column = Number(ids[1]);
+    const cellRow = Number(ids[2]);
+
+    if (column > col) {
+      cell.id = `cell-${column + 1}-${cellRow}`;
+      cell.setAttribute("rowpos", Number(cell.getAttribute("rowpos")) + 1);
+    }
+  });
+
+  document.querySelectorAll("tr").forEach((tr) => {
+    const num = Number(tr.id.split("-")[1]);
+
+    if (num > col) {
+      tr.id = `row-${Number(num + 1)}`;
+    }
+  });
+
+  const newTr = document.createElement("tr");
+  newTr.id = `row-${col + 1}`;
+
+  console.log(Number(tableConfig.cols));
+
+  for (let i = 1; i <= Number(tableConfig.cols); i++) {
+    const newCell = document.createElement("td");
+    newCell.className =
+      "cell border-color-default border-width-default border-style-default";
+    newCell.id = `cell-${col + 1}-${i}`;
+    newCell.style.width = cellWidth;
+    newCell.style.height = `${100 / tableConfig.cols + 1}%`;
+    newCell.rowSpan = 1;
+    newCell.colSpan = 1;
+
+    newCell.setAttribute("pos", i);
+    newCell.setAttribute("rowPos", i - 1);
+
+    newCell.addEventListener("mousedown", handleMouseDown);
+    newCell.addEventListener("mouseover", handleMouseOver);
+    newCell.addEventListener("mouseup", handleMouseUp);
+
+    newCell.addEventListener("click", () => {
+      if (config.mouseType === "edit") {
+        config.editableTD = newCell.id;
+        makeEditable(newCell);
+      }
+    });
+
+    newTr.append(newCell);
+  }
+
+  document
+    .getElementById("work-table")
+    .insertBefore(newTr, document.getElementById(`row-${col + 2}`));
+
+  document.querySelectorAll(".cell").forEach((cell) => {
+    cell.style.height = `${100 / (Number(tableConfig.cols) + 1)}%`;
+  });
+
+  cellWidth = `${100 / (Number(tableConfig.cols) + 1)}%`;
+  tableConfig = {
+    ...tableConfig,
+    cols: Number(tableConfig.cols) + 1,
+  };
 }
 
 function canMerge(selectedCells) {
@@ -1255,9 +1455,9 @@ selectPreview.addEventListener("change", function (e) {
 
   document.querySelectorAll(".cell").forEach((cell) => {
     if (checked) {
-      cell.classList.add('border-transparent');
+      cell.classList.add("border-transparent");
     } else {
-      cell.classList.remove('border-transparent');
+      cell.classList.remove("border-transparent");
     }
 
     cell.className.split(" ").forEach((className) => {
@@ -1346,6 +1546,12 @@ positionSelect.addEventListener("change", function (e) {
 
     editableContent.style.alignContent = alignmentMap[value] || "center";
   }
+});
+
+document.addEventListener("click", function () {
+  const contextMenu = document.getElementById("custom-contextmenu");
+  contextMenu.style.opacity = 0;
+  contextMenu.style.visibility = "hidden";
 });
 
 document.addEventListener("DOMContentLoaded", function () {

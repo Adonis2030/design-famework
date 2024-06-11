@@ -18,9 +18,9 @@
 
 /* Work-Board */
 .work-board {
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   height: 100vh;
   padding: 3%;
 }
@@ -159,3 +159,27 @@ button.btn-active {
   transition: box-shadow .2s;
   box-shadow: 0px 0px 6px 2px #c7bbbb;
 }
+
+#custom-contextmenu {
+  width: 250px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: #ffffff;
+  box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .8s;
+}
+
+#custom-contextmenu .menu-item {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color .8s;
+}
+
+#custom-contextmenu .menu-item:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
